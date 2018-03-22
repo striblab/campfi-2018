@@ -1,0 +1,33 @@
+{
+  "about this file": "This document defines configuration for this project that is not content or copy.",
+  "projectIdentifier": "campfi-2018",
+
+  "cms": {
+    "id": "123",
+    "pages": ["123"],
+    "lcds": ["other", "cms-ids"]
+  },
+  "styles": {
+    "globals": []
+  },
+  "js": {
+    "globals": [
+      "//cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver,es2015,es6,es2017,default",
+      "//maps.googleapis.com/maps/api/js?key=AIzaSyBN1TbeUQKZhhulEsc24KlJzskpNpBUAUI"
+    ]
+  },
+
+
+  "content": {
+
+  },
+  "publish": {
+
+    "production": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects/all/campfi-2018",
+      "url": "http://static.startribune.com/news/projects/all/campfi-2018/",
+      "cacheSeconds": 600
+    }
+  }
+}
