@@ -10,6 +10,8 @@
   "styles": {
     "globals": []
   },
+
+  
   "js": {
     "globals": [
       "//cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver,es2015,es6,es2017,default",
