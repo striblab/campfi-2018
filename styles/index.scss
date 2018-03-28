@@ -17,4 +17,132 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 // Project specific styles.  Split styles into files per component
 .strib.strib-styles.strib-styles-specifically {
 @import 'project';
+
+.headerCF{
+	text-align: center;
+	width: 850px;
+}
+
+.headerCF h5{
+	text-transform: uppercase;
+	font-size: 1.03em;
+}
+
+.headerCF h5 span, .headerCF .byline{
+	font-weight: bold;
+}
+
+.headerCF .byline span{
+	font-weight: normal;
+}
+
+.mainCF{
+	width: 525px;
+}
+
+nav{
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin: 25px auto;
+}
+
+nav button{
+	width: 20%;
+	background-color: white;
+	color: #ccc;
+	text-transform: uppercase;
+	font-size:.75em;
+	font-family: "Benton Sans";
+	border: 1px solid #D3D3D3;
+	border-radius: 6px;
+	padding: 5px 0 4px 0;
+	margin-right: 15px;
+}
+
+nav button:last-child{
+	margin-right:0;
+}
+
+nav button.current{
+	color: #080808;
+	border: 1px solid #080808;
+}
+
+nav button:hover{
+	color: #666;
+	border: 1px solid #666;
+	cursor: pointer;
+}
+
+section p{
+	font-family: "Benton Sans";
+}
+
+section .timestamp{
+	text-transform: uppercase;
+	font-size: .6em;
+	text-align: right;
+}
+
+table tr th{
+	border-top: none;
+	border-bottom: 3px solid #eee;
+	font-size: .7em;
+	text-transform: uppercase;
+	color: #ccc;
+	font-weight: normal;
+}
+
+table .fundsRaised, table .COH{
+	text-align: right;
+	padding: 0;
+}
+
+table tr td{
+	border-bottom: 1px solid #eee;
+	padding: 6px 0 6px 5px;
+}
+
+table tr.D .party span{
+	width: 14px;
+	height: 14px;
+	background-color: #0258A0;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	margin: auto;
+	display: block;
+}
+
+table tr.R .party span{
+	width: 14px;
+	height: 14px;
+	background-color: #C0272D;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	margin: auto;
+	display: block;
+}
+
+table td.dataBar{
+	width: 35%;
+	margin-left: 5px;
+}
+
+table td.dataBar .percentBar{
+	display: block;
+	height: 5px;
+	border-radius: 2px;
+}
+
+table tr.D .percentBar{
+	background-color: #0258A0;
+}
+
+table tr.R .percentBar{
+	background-color: #C0272D;
+}
+
 }
