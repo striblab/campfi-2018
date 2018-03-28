@@ -20,7 +20,12 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
 .headerCF{
 	text-align: center;
-	width: 850px;
+	max-width: 900px;
+}
+
+.headerCF h1{
+	padding-top: 0.3em;
+	line-height: 1.1em;
 }
 
 .headerCF h5{
@@ -75,22 +80,28 @@ nav button:hover{
 	cursor: pointer;
 }
 
+section {
+	margin-bottom: 45px;
+}
+
 section p{
 	font-family: "Benton Sans";
+	font-size: .9em;
 }
 
 section .timestamp{
 	text-transform: uppercase;
 	font-size: .6em;
 	text-align: right;
+	margin-top: -25px;
 }
 
 table tr th{
 	border-top: none;
 	border-bottom: 3px solid #eee;
-	font-size: .7em;
+	font-size: .65em;
 	text-transform: uppercase;
-	color: #ccc;
+	color: #c0c0c0;
 	font-weight: normal;
 }
 
@@ -102,6 +113,7 @@ table .fundsRaised, table .COH{
 table tr td{
 	border-bottom: 1px solid #eee;
 	padding: 6px 0 6px 5px;
+	font-size: .9em;
 }
 
 table tr.D .party span{
@@ -127,7 +139,7 @@ table tr.R .party span{
 }
 
 table td.dataBar{
-	width: 35%;
+	width: 40%;
 	margin-left: 5px;
 }
 
@@ -143,6 +155,28 @@ table tr.D .percentBar{
 
 table tr.R .percentBar{
 	background-color: #C0272D;
+}
+
+table tr.nest{
+	background-color: #f7f7f7;
+	display:none;
+}
+
+section div.slideButton button{
+	background-color: white;
+	border: none;
+	font-size: .65em;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+section div.slideButton button:hover{
+	color: #666;
+}
+
+section div.slideButton button#fewerRaised, section div.slideButton button#fewerCash{
+//	display:none;
 }
 
 }

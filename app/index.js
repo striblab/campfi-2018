@@ -17,3 +17,13 @@ import utilsFn from './utils.js';
 
 // Setup utils function
 utilsFn({ });
+
+//slidedown extras in list
+// $(document).ready(function(){
+//     $("#moreRaised").click(function(){
+//         $(".nest").slideDown();
+//     });
+//     $("#fewerRaised").click(function(){
+//         $(".nest").slideUp();
+//     });
+// });
