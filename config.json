@@ -15,7 +15,8 @@
   "js": {
     "globals": [
       "//cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver,es2015,es6,es2017,default",
-      "//maps.googleapis.com/maps/api/js?key=AIzaSyBN1TbeUQKZhhulEsc24KlJzskpNpBUAUI"
+      "//maps.googleapis.com/maps/api/js?key=AIzaSyBN1TbeUQKZhhulEsc24KlJzskpNpBUAUI",
+      "//code.jquery.com/jquery-3.3.1.min.js"
     ]
   },
 

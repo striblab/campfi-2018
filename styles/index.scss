@@ -42,7 +42,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 }
 
 .mainCF{
-	width: 525px;
+	max-width: 525px;
 }
 
 nav{
@@ -55,11 +55,11 @@ nav{
 nav button{
 	width: 20%;
 	background-color: white;
-	color: #ccc;
+	color: #c0c0c0;
 	text-transform: uppercase;
 	font-size:.75em;
 	font-family: "Benton Sans";
-	border: 1px solid #D3D3D3;
+	border: 1px solid #c0c0c0;
 	border-radius: 6px;
 	padding: 5px 0 4px 0;
 	margin-right: 15px;
@@ -87,6 +87,7 @@ section {
 section p{
 	font-family: "Benton Sans";
 	font-size: .9em;
+	margin-top: 5px;
 }
 
 section .timestamp{
@@ -96,12 +97,16 @@ section .timestamp{
 	margin-top: -25px;
 }
 
+table{
+	margin-bottom: 8px;
+}
+
 table tr th{
 	border-top: none;
 	border-bottom: 3px solid #eee;
-	font-size: .65em;
+	font-size: .6em;
 	text-transform: uppercase;
-	color: #c0c0c0;
+	color: #080808;
 	font-weight: normal;
 }
 
@@ -158,8 +163,36 @@ table tr.R .percentBar{
 }
 
 table tr.nest{
-	background-color: #f7f7f7;
 	display:none;
+}
+
+table tr.out{
+	background-color: #f7f7f7;
+	color: #404040;
+	opacity: .6;
+	//display:none;
+}
+
+table td.candName span{
+	font-size: .8em;
+}
+
+section div.key p{
+	text-align: right;
+	font-size: .65em;
+	line-height: 0;
+	margin-top: -20px;
+} 
+
+section div.key span.outKey{
+	width: 14px;
+	height: 14px;
+	background-color: #ededed;
+	border-radius: 2px;
+	border: 1px solid #999;
+	display: inline-block;
+	margin-left: 10px;
+	margin-bottom: -2px;
 }
 
 section div.slideButton button{
@@ -171,12 +204,17 @@ section div.slideButton button{
 	cursor: pointer;
 }
 
+section div.slideButton span.plus, section div.slideButton span.minus{
+	font-size: 1.2em;
+	font-weight: normal;
+}
+
 section div.slideButton button:hover{
 	color: #666;
 }
 
 section div.slideButton button#fewerRaised, section div.slideButton button#fewerCash{
-//	display:none;
+	display:none;
 }
 
 }

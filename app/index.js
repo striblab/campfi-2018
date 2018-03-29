@@ -19,11 +19,33 @@ import utilsFn from './utils.js';
 utilsFn({ });
 
 //slidedown extras in list
-// $(document).ready(function(){
-//     $("#moreRaised").click(function(){
-//         $(".nest").slideDown();
-//     });
-//     $("#fewerRaised").click(function(){
-//         $(".nest").slideUp();
-//     });
-// });
+$(document).ready(function(){
+    $("#moreRaised").click(function(){
+        $(".raisedTable .nest").slideDown(1500,function(){
+	    	$("#moreRaised").hide();
+	    	$("#fewerRaised").show();
+        	});
+    });
+
+    $("#fewerRaised").click(function(){
+        $(".raisedTable .nest").slideUp(500,function(){
+        	$("#fewerRaised").hide();
+        	$("#moreRaised").show();
+        	});
+    });
+
+    $("#moreCash").click(function(){
+        $(".cashTable .nest").slideDown(1500,function(){
+	    	$("#moreCash").hide();
+	    	$("#fewerCash").show();
+        	});
+    });
+
+    $("#fewerCash").click(function(){
+        $(".cashTable .nest").slideUp(500,function(){
+        	$("#fewerCash").hide();
+        	$("#moreCash").show();
+        	});
+    });
+
+});

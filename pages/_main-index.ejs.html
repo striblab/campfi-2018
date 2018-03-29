@@ -9,7 +9,7 @@
 		<h4>Walz is winning fundraising race </h4>
 		<p class="timestamp">April 16, 2018</p>
 		<p>At the end of 2017, U.S. Rep. Tim Walz, currently representing Minnesota's first congressional district, had brought in more than twice as much as any other candidate in the governor's race. This figure includes any loans a candidate may have taken out.</p>
-		<table>
+		<table class="raisedTable">
 			<tr>
 				<th class="party"></th>
 				<th class="candName"></th>
@@ -18,9 +18,15 @@
 			</tr>
 			<tr class="D">
 				<td class="party"><span></span></td>
-				<td class="candName">Tim Walz</td>
+				<td class="candName">Tim Walz <span>(i)</span></td>
 				<td class="fundsRaised">$1,111,383</td>
 				<td class="dataBar"><span class="percentBar" style="width: 100%"></span></td>
+			</tr>
+			<tr class="D out">
+				<td class="party"><span></span></td>
+				<td class="candName">Chris Coleman</td>
+				<td class="fundsRaised">$602,248</td>
+				<td class="dataBar"><span class="percentBar" style="width: 54.1891%"></span></td>
 			</tr>
 			<tr class="D">
 				<td class="party"><span></span></td>
@@ -52,7 +58,7 @@
 				<td class="fundsRaised">$125,549</td>
 				<td class="dataBar"><span class="percentBar" style="width: 11.2966%"></span></td>
 			</tr>
-			<tr class="D nest">
+			<tr class="D nest out">
 				<td class="party"><span></span></td>
 				<td class="candName">Tina Liebling</td>
 				<td class="fundsRaised">$74,876</td>
@@ -72,8 +78,11 @@
 			</tr>
 		</table>
 		<div class="slideButton">
-			<button id="moreRaised">+ More candidates</button>
-			<button id="fewerRaised">- Fewer candidates</button>
+			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
+			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
+		</div>
+		<div class="key">
+			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
 		</div>
 	</section>
 
@@ -81,7 +90,7 @@
 		<h4>Cash rankings shuffle</h4>
 		<p class="timestamp">April 16, 2018</p>
 		<p>Republican Jeff Johnson, a Hennepin County Board member who ran for this position in 2014, had nearly as much cash in his war chest as State Auditor Rebecca Otto at the end of 2017.</p>
-		<table>
+		<table class="cashTable">
 			<tr>
 				<th class="party"></th>
 				<th class="candName"></th>
@@ -93,6 +102,12 @@
 				<td class="candName">Tim Walz</td>
 				<td class="COH">$488,195</td>
 				<td class="dataBar"><span class="percentBar" style="width: 43.9268%"></span></td>
+			</tr>
+			<tr class="D out">
+				<td class="party"><span></span></td>
+				<td class="candName">Chris Coleman</td>
+				<td class="COH">$294,418</td>
+				<td class="dataBar"><span class="percentBar" style="width: 26.4911%"></span></td>
 			</tr>
 			<tr class="D">
 				<td class="party"><span></span></td>
@@ -130,7 +145,7 @@
 				<td class="COH">$39,728</td>
 				<td class="dataBar"><span class="percentBar" style="width: 3.5746%"></span></td>
 			</tr>
-			<tr class="D nest">
+			<tr class="D nest out">
 				<td class="party"><span></span></td>
 				<td class="candName">Tina Liebling</td>
 				<td class="COH">$20,973</td>
@@ -144,8 +159,11 @@
 			</tr>
 		</table>
 		<div class="slideButton">
-			<button id="moreCash">+ More candidates</button>
-			<button id="fewerCash">- Fewer candidates</button>
+			<button id="moreCash"><span class="plus">+</span> More candidates</button>
+			<button id="fewerCash"><span class="minus">&minus;</span> Fewer candidates</button>
+		</div>
+		<div class="key">
+			<p><span class="outKey"></span> Dropped out</p>
 		</div>
 	</section>
 
