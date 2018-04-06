@@ -17,73 +17,31 @@
 		<p class="timestamp">April 16, 2018</p>
 		<p>At the end of 2017, U.S. Rep. Tim Walz, currently representing Minnesota's first congressional district, had brought in more than twice as much as any other candidate in the governor's race. This figure includes any loans a candidate may have taken out.</p>
 		<table class="raisedTable">
-			<tr>
-				<th class="party"></th>
-				<th class="candName"></th>
-				<th class="fundsRaised">Funds raised</th>
-				<th class="dataBar"></th>
-			</tr>
-			<tr class="D">
-				<td class="party"><span></span></td>
-				<td class="candName">Tim Walz <span>(i)</span></td>
-				<td class="fundsRaised">$1,111,383</td>
-				<td class="dataBar"><span class="percentBar" style="width: 100%"></span></td>
-			</tr>
-			<tr class="D out">
-				<td class="party"><span></span></td>
-				<td class="candName">Chris Coleman</td>
-				<td class="fundsRaised">$602,248</td>
-				<td class="dataBar"><span class="percentBar" style="width: 54.1891%"></span></td>
-			</tr>
-			<tr class="D">
-				<td class="party"><span></span></td>
-				<td class="candName">Erin Murphy</td>
-				<td class="fundsRaised">$375,353</td>
-				<td class="dataBar"><span class="percentBar" style="width: 33.7735%"></span></td>
-			</tr>
-			<tr class="D">
-				<td class="party"><span></span></td>
-				<td class="candName">Rebecca Otto</td>
-				<td class="fundsRaised">$318,652</td>
-				<td class="dataBar"><span class="percentBar" style="width: 28.6717%"></span></td>
-			</tr>
-			<tr class="D">
-				<td class="party"><span></span></td>
-				<td class="candName">Paul Thissen</td>
-				<td class="fundsRaised">$299,118</td>
-				<td class="dataBar"><span class="percentBar" style="width: 26.9140%"></span></td>
-			</tr>
-			<tr class="R">
-				<td class="party"><span></span></td>
-				<td class="candName">Jeff Johnson</td>
-				<td class="fundsRaised">$258,993</td>
-				<td class="dataBar"><span class="percentBar" style="width: 23.3037%"></span></td>
-			</tr>
-			<tr class="R">
-				<td class="party"><span></span></td>
-				<td class="candName">Keith Downey</td>
-				<td class="fundsRaised">$125,549</td>
-				<td class="dataBar"><span class="percentBar" style="width: 11.2966%"></span></td>
-			</tr>
-			<tr class="D nest out">
-				<td class="party"><span></span></td>
-				<td class="candName">Tina Liebling</td>
-				<td class="fundsRaised">$74,876</td>
-				<td class="dataBar"><span class="percentBar" style="width: 6.7372%"></span></td>
-			</tr>
-			<tr class="R nest">
-				<td class="party"><span></span></td>
-				<td class="candName">Mary Giuliani Stephens</td>
-				<td class="fundsRaised">$71,150</td>
-				<td class="dataBar"><span class="percentBar" style="width: 6.4019%"></span></td>
-			</tr>
-			<tr class="R nest">
-				<td class="party"><span></span></td>
-				<td class="candName">Phillip Parrish</td>
-				<td class="fundsRaised">$3,376</td>
-				<td class="dataBar"><span class="percentBar" style="width: 0.3038%"></span></td>
-			</tr>
+      <thead>
+  			<tr>
+  				<th class="party"></th>
+  				<th class="candName"></th>
+  				<th class="fundsRaised">Funds raised</th>
+  				<th class="dataBar"></th>
+  			</tr>
+      </thead>
+
+      <tbody>
+        <% let govReceipts = _.sortBy(governors, g => parseFloat(g.totReceipts || 0)).reverse(); %>
+        <% _.each(govReceipts, (g, i) => { %>
+    			<tr class="<%= g.party %> <%= g.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+    				<td class="party"><span></span></td>
+    				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
+    				<td class="fundsRaised">$<%= parseFloat(g.totReceipts || 0).toLocaleString() %></td>
+    				<td class="dataBar">
+              <% let w = parseFloat(g.totReceipts || 0) / parseFloat(govReceipts[0].totReceipts || 0) * 100 %>
+              <span class="percentBar" style="width: <%= w %>%"></span>
+            </td>
+    			</tr>
+        <% }) %>
+      </tbody>
 		</table>
+
 		<div class="slideButton">
 			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
 			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
@@ -98,73 +56,31 @@
 		<p class="timestamp">April 16, 2018</p>
 		<p>Republican Jeff Johnson, a Hennepin County Board member who ran for this position in 2014, had nearly as much cash in his war chest as State Auditor Rebecca Otto at the end of 2017.</p>
 		<table class="cashTable">
-			<tr>
-				<th class="party"></th>
-				<th class="candName"></th>
-				<th class="COH">Cash on hand</th>
-				<th class="dataBar"></th>
-			</tr>
-			<tr class="D">
-				<td class="party"><span></span></td>
-				<td class="candName">Tim Walz</td>
-				<td class="COH">$488,195</td>
-				<td class="dataBar"><span class="percentBar" style="width: 43.9268%"></span></td>
-			</tr>
-			<tr class="D out">
-				<td class="party"><span></span></td>
-				<td class="candName">Chris Coleman</td>
-				<td class="COH">$294,418</td>
-				<td class="dataBar"><span class="percentBar" style="width: 26.4911%"></span></td>
-			</tr>
-			<tr class="D">
-				<td class="party"><span></span></td>
-				<td class="candName">Rebecca Otto</td>
-				<td class="COH">$182,357</td>
-				<td class="dataBar"><span class="percentBar" style="width: 16.4081%"></span></td>
-			</tr>
-			<tr class="R">
-				<td class="party"><span></span></td>
-				<td class="candName">Jeff Johnson</td>
-				<td class="COH">$179,763</td>
-				<td class="dataBar"><span class="percentBar" style="width: 16.1747%"></span></td>
-			</tr>
-			<tr class="D">
-				<td class="party"><span></span></td>
-				<td class="candName">Erin Murphy</td>
-				<td class="COH">$147,429</td>
-				<td class="dataBar"><span class="percentBar" style="width: 13.2654%"></span></td>
-			</tr>
-			<tr class="D">
-				<td class="party"><span></span></td>
-				<td class="candName">Paul Thissen</td>
-				<td class="COH">$108,135</td>
-				<td class="dataBar"><span class="percentBar" style="width: 9.7298%"></span></td>
-			</tr>
-			<tr class="R">
-				<td class="party"><span></span></td>
-				<td class="candName">Keith Downey</td>
-				<td class="COH">$52,580</td>
-				<td class="dataBar"><span class="percentBar" style="width: 4.7310%"></span></td>
-			</tr>
-			<tr class="R nest">
-				<td class="party"><span></span></td>
-				<td class="candName">Mary Giuliani Stephens</td>
-				<td class="COH">$39,728</td>
-				<td class="dataBar"><span class="percentBar" style="width: 3.5746%"></span></td>
-			</tr>
-			<tr class="D nest out">
-				<td class="party"><span></span></td>
-				<td class="candName">Tina Liebling</td>
-				<td class="COH">$20,973</td>
-				<td class="dataBar"><span class="percentBar" style="width: 1.8871%"></span></td>
-			</tr>
-			<tr class="R nest">
-				<td class="party"><span></span></td>
-				<td class="candName">Phillip Parrish</td>
-				<td class="COH">$893</td>
-				<td class="dataBar"><span class="percentBar" style="width: 0.0804%"></span></td>
-			</tr>
+      <thead>
+  			<tr>
+  				<th class="party"></th>
+  				<th class="candName"></th>
+  				<th class="COH">Cash on hand</th>
+  				<th class="dataBar"></th>
+  			</tr>
+      </thead>
+
+      <tbody>
+        <% let govCache = _.sortBy(governors, g => parseFloat(g.endCash || 0)).reverse(); %>
+        <% _.each(govCache, (g, i) => { %>
+    			<tr class="<%= g.party %> <%= g.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+    				<td class="party"><span></span></td>
+    				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
+    				<td class="COH">$<%= parseFloat(g.endCash || 0).toLocaleString() %></td>
+    				<td class="dataBar">
+              <% let w = parseFloat(g.endCash || 0) / parseFloat(govCache[0].endCash || 0) * 100 %>
+              <span class="percentBar" style="width: <%= w %>%"></span>
+            </td>
+    			</tr>
+        <% }) %>
+      </tbody>
 		</table>
+
 		<div class="slideButton">
 			<button id="moreCash"><span class="plus">+</span> More candidates</button>
 			<button id="fewerCash"><span class="minus">&minus;</span> Fewer candidates</button>

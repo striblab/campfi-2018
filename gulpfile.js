@@ -35,32 +35,43 @@ const gulpContent = require('./lib/gulp-content.js');
 const gulpPublish = require('./lib/gulp-publish.js');
 const _ = require('lodash');
 const jest = require('./lib/gulp-jest.js');
-const pkg = require('./package.json');
 const config = exists('config.custom.json')
   ? require('./config.custom.json')
   : require('./config.json');
+const templateData = require('./lib/template-data.js');
 
 const argv = require('yargs').argv;
 require('dotenv').load({ silent: true });
 
 // Process base html templates/pages (not templates used in front-end JS)
-gulp.task('html', () => {
-  const content = exists('content.json') ? require('./content.json') : {};
+gulp.task('html', async () => {
+  let data = await templateData({
+    content: 'content.json',
+    pkg: 'package.json',
+    config: 'config.json',
+    governors: {
+      location: 'sources/governors.csv',
+      renameHeaders: true
+    }
+  });
+
+  console.log(data.governors[0]);
+  data._ = _;
 
   return gulp
-    .src(['pages/**/*.ejs.html', '!pages/**/_*.ejs.html'])
+    .src([
+      'pages/**/*.ejs.html',
+      '!pages/**/_footer.ejs.html',
+      '!pages/**/_header.ejs.html',
+      '!pages/**/_head.ejs.html'
+    ])
     .pipe(
       include({
         prefix: '@@',
         basepath: '@file'
       })
     )
-    .pipe(
-      ejs({ config: config, content: content, package: pkg, _: _ }).on(
-        'error',
-        gutil.log
-      )
-    )
+    .pipe(ejs(data).on('error', gutil.log))
     .pipe(
       rename(function(path) {
         path.basename = path.basename.replace('.ejs', '');
