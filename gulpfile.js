@@ -49,13 +49,18 @@ gulp.task('html', async () => {
     content: 'content.json',
     pkg: 'package.json',
     config: 'config.json',
-    governors: {
-      location: 'sources/governors.csv',
+    governor: {
+      location: 'sources/governor.csv',
+      renameHeaders: true
+    },
+    senate: {
+      location: 'sources/senate.csv',
       renameHeaders: true
     }
   });
 
-  console.log(data.governors[0]);
+  console.log(data.governor[0]);
+  console.log(data.senate[0]);
   data._ = _;
 
   return gulp

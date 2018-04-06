@@ -27,7 +27,7 @@
       </thead>
 
       <tbody>
-        <% let govReceipts = _.sortBy(governors, g => parseFloat(g.totReceipts || 0)).reverse(); %>
+        <% let govReceipts = _.sortBy(governor, g => parseFloat(g.totReceipts || 0)).reverse(); %>
         <% _.each(govReceipts, (g, i) => { %>
     			<tr class="<%= g.party %> <%= g.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
     				<td class="party"><span></span></td>
@@ -66,7 +66,7 @@
       </thead>
 
       <tbody>
-        <% let govCache = _.sortBy(governors, g => parseFloat(g.endCash || 0)).reverse(); %>
+        <% let govCache = _.sortBy(governor, g => parseFloat(g.endCash || 0)).reverse(); %>
         <% _.each(govCache, (g, i) => { %>
     			<tr class="<%= g.party %> <%= g.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
     				<td class="party"><span></span></td>
