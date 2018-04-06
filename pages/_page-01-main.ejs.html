@@ -1,93 +1,95 @@
-<div class="container-lg headerCF">
-	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Campaign Finance</h5>
-	<h1>Rep. Tim Walz leads money race in bid for Minnesota governor</h1>
-	<p class="byline">Graphics by C.J. Sinner • <span>Star Tribune</span></p>
-	<aside class="article-share"></aside>
-</div>
+<div class="strib strib-styles strib-styles-specifically">
+  <div class="container-lg headerCF">
+  	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Campaign Finance</h5>
+  	<h1>Rep. Tim Walz leads money race in bid for Minnesota governor</h1>
+  	<p class="byline">Graphics by C.J. Sinner • <span>Star Tribune</span></p>
+  	<aside class="article-share"></aside>
+  </div>
 
-<div class="container-lg mainCF">
-	<nav>
-		<button class="current">MN GOV</button>
-		<button>U.S. HOUSE</button>
-		<button>U.S. SENATE</button>
-	</nav>
+  <div class="container-lg mainCF">
+  	<nav>
+  		<button class="current">MN GOV</button>
+  		<button>U.S. HOUSE</button>
+  		<button>U.S. SENATE</button>
+  	</nav>
 
-	<section>
-		<h4>Walz is winning fundraising race </h4>
-		<p class="timestamp">April 16, 2018</p>
-		<p>At the end of 2017, U.S. Rep. Tim Walz, currently representing Minnesota's first congressional district, had brought in more than twice as much as any other candidate in the governor's race. This figure includes any loans a candidate may have taken out.</p>
-		<table class="raisedTable">
-      <thead>
-  			<tr>
-  				<th class="party"></th>
-  				<th class="candName"></th>
-  				<th class="fundsRaised">Funds raised</th>
-  				<th class="dataBar"></th>
-  			</tr>
-      </thead>
-
-      <tbody>
-        <% let govReceipts = _.sortBy(governor, g => parseFloat(g.totReceipts || 0)).reverse(); %>
-        <% _.each(govReceipts, (g, i) => { %>
-    			<tr class="<%= g.party %> <%= g.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
-    				<td class="party"><span></span></td>
-    				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
-    				<td class="fundsRaised">$<%= parseFloat(g.totReceipts || 0).toLocaleString() %></td>
-    				<td class="dataBar">
-              <% let w = parseFloat(g.totReceipts || 0) / parseFloat(govReceipts[0].totReceipts || 0) * 100 %>
-              <span class="percentBar" style="width: <%= w %>%"></span>
-            </td>
+  	<section>
+  		<h4>Walz is winning fundraising race </h4>
+  		<p class="timestamp">April 16, 2018</p>
+  		<p>At the end of 2017, U.S. Rep. Tim Walz, currently representing Minnesota's first congressional district, had brought in more than twice as much as any other candidate in the governor's race. This figure includes any loans a candidate may have taken out.</p>
+  		<table class="raisedTable">
+        <thead>
+    			<tr>
+    				<th class="party"></th>
+    				<th class="candName"></th>
+    				<th class="fundsRaised">Funds raised</th>
+    				<th class="dataBar"></th>
     			</tr>
-        <% }) %>
-      </tbody>
-		</table>
+        </thead>
 
-		<div class="slideButton">
-			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
-			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
-		</div>
-		<div class="key">
-			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
-		</div>
-	</section>
+        <tbody>
+          <% let govReceipts = _.sortBy(governor, g => parseFloat(g.totReceipts || 0)).reverse(); %>
+          <% _.each(govReceipts, (g, i) => { %>
+      			<tr class="<%= g.party %> <%= g.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+      				<td class="party"><span></span></td>
+      				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
+      				<td class="fundsRaised">$<%= parseFloat(g.totReceipts || 0).toLocaleString() %></td>
+      				<td class="dataBar">
+                <% let w = parseFloat(g.totReceipts || 0) / parseFloat(govReceipts[0].totReceipts || 0) * 100 %>
+                <span class="percentBar" style="width: <%= w %>%"></span>
+              </td>
+      			</tr>
+          <% }) %>
+        </tbody>
+  		</table>
 
-	<section>
-		<h4>Cash rankings shuffle</h4>
-		<p class="timestamp">April 16, 2018</p>
-		<p>Republican Jeff Johnson, a Hennepin County Board member who ran for this position in 2014, had nearly as much cash in his war chest as State Auditor Rebecca Otto at the end of 2017.</p>
-		<table class="cashTable">
-      <thead>
-  			<tr>
-  				<th class="party"></th>
-  				<th class="candName"></th>
-  				<th class="COH">Cash on hand</th>
-  				<th class="dataBar"></th>
-  			</tr>
-      </thead>
+  		<div class="slideButton">
+  			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
+  			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
+  		</div>
+  		<div class="key">
+  			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
+  		</div>
+  	</section>
 
-      <tbody>
-        <% let govCache = _.sortBy(governor, g => parseFloat(g.endCash || 0)).reverse(); %>
-        <% _.each(govCache, (g, i) => { %>
-    			<tr class="<%= g.party %> <%= g.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
-    				<td class="party"><span></span></td>
-    				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
-    				<td class="COH">$<%= parseFloat(g.endCash || 0).toLocaleString() %></td>
-    				<td class="dataBar">
-              <% let w = parseFloat(g.endCash || 0) / parseFloat(govCache[0].endCash || 0) * 100 %>
-              <span class="percentBar" style="width: <%= w %>%"></span>
-            </td>
+  	<section>
+  		<h4>Cash rankings shuffle</h4>
+  		<p class="timestamp">April 16, 2018</p>
+  		<p>Republican Jeff Johnson, a Hennepin County Board member who ran for this position in 2014, had nearly as much cash in his war chest as State Auditor Rebecca Otto at the end of 2017.</p>
+  		<table class="cashTable">
+        <thead>
+    			<tr>
+    				<th class="party"></th>
+    				<th class="candName"></th>
+    				<th class="COH">Cash on hand</th>
+    				<th class="dataBar"></th>
     			</tr>
-        <% }) %>
-      </tbody>
-		</table>
+        </thead>
 
-		<div class="slideButton">
-			<button id="moreCash"><span class="plus">+</span> More candidates</button>
-			<button id="fewerCash"><span class="minus">&minus;</span> Fewer candidates</button>
-		</div>
-		<div class="key">
-			<p><span class="outKey"></span> Dropped out</p>
-		</div>
-	</section>
+        <tbody>
+          <% let govCache = _.sortBy(governor, g => parseFloat(g.endCash || 0)).reverse(); %>
+          <% _.each(govCache, (g, i) => { %>
+      			<tr class="<%= g.party %> <%= g.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+      				<td class="party"><span></span></td>
+      				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
+      				<td class="COH">$<%= parseFloat(g.endCash || 0).toLocaleString() %></td>
+      				<td class="dataBar">
+                <% let w = parseFloat(g.endCash || 0) / parseFloat(govCache[0].endCash || 0) * 100 %>
+                <span class="percentBar" style="width: <%= w %>%"></span>
+              </td>
+      			</tr>
+          <% }) %>
+        </tbody>
+  		</table>
 
+  		<div class="slideButton">
+  			<button id="moreCash"><span class="plus">+</span> More candidates</button>
+  			<button id="fewerCash"><span class="minus">&minus;</span> Fewer candidates</button>
+  		</div>
+  		<div class="key">
+  			<p><span class="outKey"></span> Dropped out</p>
+  		</div>
+  	</section>
+
+  </div>
 </div>

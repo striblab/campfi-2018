@@ -1,108 +1,110 @@
-<div class="container-lg headerCF">
-	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Campaign Finance</h5>
-	<h1>Senate page here...</h1>
-	<p class="byline">Graphics by C.J. Sinner • <span>Star Tribune</span></p>
-	<aside class="article-share"></aside>
-</div>
+<div class="strib strib-styles strib-styles-specifically">
+  <div class="container-lg headerCF">
+  	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Campaign Finance</h5>
+  	<h1>Senate page here...</h1>
+  	<p class="byline">Graphics by C.J. Sinner • <span>Star Tribune</span></p>
+  	<aside class="article-share"></aside>
+  </div>
 
-<div class="container-lg mainCF">
-	<nav>
-		<button>MN GOV</button>
-		<button>U.S. HOUSE</button>
-		<button class="current">U.S. SENATE</button>
-	</nav>
+  <div class="container-lg mainCF">
+  	<nav>
+  		<button>MN GOV</button>
+  		<button>U.S. HOUSE</button>
+  		<button class="current">U.S. SENATE</button>
+  	</nav>
 
-	<section>
-		<h4>Senate receipts</h4>
-		<p class="timestamp">April 16, 2018</p>
-		<p>At the end of 2017, U.S. Rep. Tim Walz, currently representing Minnesota's first congressional district, had brought in more than twice as much as any other candidate in the governor's race. This figure includes any loans a candidate may have taken out.</p>
+  	<section>
+  		<h4>Senate receipts</h4>
+  		<p class="timestamp">April 16, 2018</p>
+  		<p>At the end of 2017, U.S. Rep. Tim Walz, currently representing Minnesota's first congressional district, had brought in more than twice as much as any other candidate in the governor's race. This figure includes any loans a candidate may have taken out.</p>
 
-    <% _.each(_.groupBy(senate, 'race'), senateRace => {%>
-      <h5><%= senateRace[0].race %></h5>
+      <% _.each(_.groupBy(senate, 'race'), senateRace => {%>
+        <h5><%= senateRace[0].race %></h5>
 
-  		<table class="raisedTable">
-        <thead>
-    			<tr>
-    				<th class="party"></th>
-    				<th class="candName"></th>
-    				<th class="fundsRaised">Funds raised</th>
-    				<th class="dataBar"></th>
-    			</tr>
-        </thead>
-
-        <tbody>
-          <% let raceReceipts = _.sortBy(senateRace, r => parseFloat(r.ye17RecTot || 0)).reverse(); %>
-          <% _.each(raceReceipts, (r, i) => { %>
-      			<tr class="<%= r.party %> <%= r.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
-      				<td class="party"><span></span></td>
-      				<td class="candName"><%= r.firstname %> <%= r.lastname %> <span></span></td>
-      				<td class="fundsRaised">$<%= parseFloat(r.ye17RecTot || 0).toLocaleString() %></td>
-      				<td class="dataBar">
-                <% let w = parseFloat(r.ye17RecTot || 0) / parseFloat(raceReceipts[0].ye17RecTot || 0) * 100 %>
-                <span class="percentBar" style="width: <%= w %>%"></span>
-              </td>
+    		<table class="raisedTable">
+          <thead>
+      			<tr>
+      				<th class="party"></th>
+      				<th class="candName"></th>
+      				<th class="fundsRaised">Funds raised</th>
+      				<th class="dataBar"></th>
       			</tr>
-          <% }) %>
-        </tbody>
-  		</table>
+          </thead>
 
-      <% if (raceReceipts.length > 10) { %>
-    		<div class="slideButton">
-    			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
-    			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
+          <tbody>
+            <% let raceReceipts = _.sortBy(senateRace, r => parseFloat(r.ye17RecTot || 0)).reverse(); %>
+            <% _.each(raceReceipts, (r, i) => { %>
+        			<tr class="<%= r.party %> <%= r.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+        				<td class="party"><span></span></td>
+        				<td class="candName"><%= r.firstname %> <%= r.lastname %> <span></span></td>
+        				<td class="fundsRaised">$<%= parseFloat(r.ye17RecTot || 0).toLocaleString() %></td>
+        				<td class="dataBar">
+                  <% let w = parseFloat(r.ye17RecTot || 0) / parseFloat(raceReceipts[0].ye17RecTot || 0) * 100 %>
+                  <span class="percentBar" style="width: <%= w %>%"></span>
+                </td>
+        			</tr>
+            <% }) %>
+          </tbody>
+    		</table>
+
+        <% if (raceReceipts.length > 10) { %>
+      		<div class="slideButton">
+      			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
+      			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
+      		</div>
+        <% } %>
+
+    		<div class="key">
+    			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
     		</div>
-      <% } %>
+      <% }) %>
+  	</section>
 
-  		<div class="key">
-  			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
-  		</div>
-    <% }) %>
-	</section>
+  	<section>
+  		<h4>Senate cash</h4>
+  		<p class="timestamp">April 16, 2018</p>
+  		<p>At the end of 2017, U.S. Rep. Tim Walz, currently representing Minnesota's first congressional district, had brought in more than twice as much as any other candidate in the governor's race. This figure includes any loans a candidate may have taken out.</p>
 
-	<section>
-		<h4>Senate cash</h4>
-		<p class="timestamp">April 16, 2018</p>
-		<p>At the end of 2017, U.S. Rep. Tim Walz, currently representing Minnesota's first congressional district, had brought in more than twice as much as any other candidate in the governor's race. This figure includes any loans a candidate may have taken out.</p>
+      <% _.each(_.groupBy(senate, 'race'), senateRace => {%>
+        <h5><%= senateRace[0].race %></h5>
 
-    <% _.each(_.groupBy(senate, 'race'), senateRace => {%>
-      <h5><%= senateRace[0].race %></h5>
-
-  		<table class="raisedTable">
-        <thead>
-    			<tr>
-    				<th class="party"></th>
-    				<th class="candName"></th>
-    				<th class="COH">Funds raised</th>
-    				<th class="dataBar"></th>
-    			</tr>
-        </thead>
-
-        <tbody>
-          <% let raceCash = _.sortBy(senateRace, r => parseFloat(r.ye17Coh || 0)).reverse(); %>
-          <% _.each(raceCash, (r, i) => { %>
-      			<tr class="<%= r.party %> <%= r.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
-      				<td class="party"><span></span></td>
-      				<td class="candName"><%= r.firstname %> <%= r.lastname %> <span></span></td>
-      				<td class="COH">$<%= parseFloat(r.ye17Coh || 0).toLocaleString() %></td>
-      				<td class="dataBar">
-                <% let w = parseFloat(r.ye17Coh || 0) / parseFloat(raceCash[0].ye17Coh || 0) * 100 %>
-                <span class="percentBar" style="width: <%= w %>%"></span>
-              </td>
+    		<table class="raisedTable">
+          <thead>
+      			<tr>
+      				<th class="party"></th>
+      				<th class="candName"></th>
+      				<th class="COH">Funds raised</th>
+      				<th class="dataBar"></th>
       			</tr>
-          <% }) %>
-        </tbody>
-  		</table>
+          </thead>
 
-      <% if (raceCash.length > 10) { %>
-    		<div class="slideButton">
-    			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
-    			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
+          <tbody>
+            <% let raceCash = _.sortBy(senateRace, r => parseFloat(r.ye17Coh || 0)).reverse(); %>
+            <% _.each(raceCash, (r, i) => { %>
+        			<tr class="<%= r.party %> <%= r.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+        				<td class="party"><span></span></td>
+        				<td class="candName"><%= r.firstname %> <%= r.lastname %> <span></span></td>
+        				<td class="COH">$<%= parseFloat(r.ye17Coh || 0).toLocaleString() %></td>
+        				<td class="dataBar">
+                  <% let w = parseFloat(r.ye17Coh || 0) / parseFloat(raceCash[0].ye17Coh || 0) * 100 %>
+                  <span class="percentBar" style="width: <%= w %>%"></span>
+                </td>
+        			</tr>
+            <% }) %>
+          </tbody>
+    		</table>
+
+        <% if (raceCash.length > 10) { %>
+      		<div class="slideButton">
+      			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
+      			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
+      		</div>
+        <% } %>
+
+    		<div class="key">
+    			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
     		</div>
-      <% } %>
-
-  		<div class="key">
-  			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
-  		</div>
-    <% }) %>
-	</section>
+      <% }) %>
+  	</section>
+  </div>
 </div>
