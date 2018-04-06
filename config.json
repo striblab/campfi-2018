@@ -1,14 +1,11 @@
 {
-  "about this file": "This document defines configuration for this project that is not content or copy.",
+  "about this file":
+    "This document defines configuration for this project that is not content or copy.",
   "projectIdentifier": "campfi-2018",
   "cms": {
     "id": "478334513",
-    "pages": [
-      "478334513"
-    ],
-    "lcds": [
-      "478334843"
-    ]
+    "pages": ["478334513", "478994733", "478994853"],
+    "lcds": ["478334843", "478995393", "478995533"]
   },
   "styles": {
     "globals": []
