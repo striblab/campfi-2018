@@ -56,11 +56,16 @@ gulp.task('html', async () => {
     senate: {
       location: 'sources/senate.csv',
       renameHeaders: true
+    },
+    house: {
+      location: 'sources/house.csv',
+      renameHeaders: true
     }
   });
 
   console.log(data.governor[0]);
   console.log(data.senate[0]);
+  console.log(data.house[0]);
   data._ = _;
 
   return gulp
