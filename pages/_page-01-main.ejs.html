@@ -30,7 +30,7 @@
         <tbody>
           <% let govReceipts = _.sortBy(governor, g => parseFloat(g.totReceipts || 0)).reverse(); %>
           <% _.each(govReceipts, (g, i) => { %>
-      			<tr class="<%= g.party %> <%= g.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
       				<td class="party"><span></span></td>
       				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
       				<td class="fundsRaised">$<%= parseFloat(g.totReceipts || 0).toLocaleString() %></td>
@@ -69,7 +69,7 @@
         <tbody>
           <% let govCache = _.sortBy(governor, g => parseFloat(g.endCash || 0)).reverse(); %>
           <% _.each(govCache, (g, i) => { %>
-      			<tr class="<%= g.party %> <%= g.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
       				<td class="party"><span></span></td>
       				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
       				<td class="COH">$<%= parseFloat(g.endCash || 0).toLocaleString() %></td>
