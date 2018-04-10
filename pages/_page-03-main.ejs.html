@@ -1,7 +1,7 @@
 <div class="strib strib-styles strib-styles-specifically">
   <div class="container-lg headerCF">
   	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Campaign Finance</h5>
-  	<h1>Senate page here...</h1>
+  	<h1>Fundraising is tight race so far between Smith, Housley</h1>
   	<p class="byline">Graphics by C.J. Sinner • <span>Star Tribune</span></p>
   	<aside class="article-share"></aside>
   </div>
@@ -34,10 +34,14 @@
           <tbody>
             <% let raceReceipts = _.sortBy(senateRace, r => parseFloat(r.ye17RecTot || 0)).reverse(); %>
             <% _.each(raceReceipts, (r, i) => { %>
-        			<tr class="<%= r.party %> <%= r.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+        			<tr class="<%= r.party %> <%= r.out === '0' ? 'out' : '' %> <%= i > 2 ? 'nest' : '' %>">
         				<td class="party"><span></span></td>
-        				<td class="candName"><%= r.firstname %> <%= r.lastname %> <span></span></td>
-        				<td class="fundsRaised">$<%= parseFloat(r.ye17RecTot || 0).toLocaleString() %></td>
+                <td class="candName"><%= r.firstname %> <%= r.lastname %> 
+                  <% if (r.incumbent === 'Y') { %>
+                  <span>(i)</span>
+                  <% } %>
+                </td>
+                <td class="fundsRaised">$<%= parseFloat(r.ye17RecTot || 0).toLocaleString() %></td>
         				<td class="dataBar">
                   <% let w = parseFloat(r.ye17RecTot || 0) / parseFloat(raceReceipts[0].ye17RecTot || 0) * 100 %>
                   <span class="percentBar" style="width: <%= w %>%"></span>
@@ -47,15 +51,8 @@
           </tbody>
     		</table>
 
-        <% if (raceReceipts.length > 10) { %>
-      		<div class="slideButton">
-      			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
-      			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
-      		</div>
-        <% } %>
-
     		<div class="key">
-    			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
+    			<p>(i) Incumbent</p>
     		</div>
       <% }) %>
   	</section>
@@ -83,8 +80,12 @@
             <% _.each(raceCash, (r, i) => { %>
         			<tr class="<%= r.party %> <%= r.out === '0' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
         				<td class="party"><span></span></td>
-        				<td class="candName"><%= r.firstname %> <%= r.lastname %> <span></span></td>
-        				<td class="COH">$<%= parseFloat(r.ye17Coh || 0).toLocaleString() %></td>
+                <td class="candName"><%= r.firstname %> <%= r.lastname %> 
+                  <% if (r.incumbent === 'Y') { %>
+                  <span>(i)</span>
+                  <% } %>
+                </td>
+                <td class="COH">$<%= parseFloat(r.ye17Coh || 0).toLocaleString() %></td>
         				<td class="dataBar">
                   <% let w = parseFloat(r.ye17Coh || 0) / parseFloat(raceCash[0].ye17Coh || 0) * 100 %>
                   <span class="percentBar" style="width: <%= w %>%"></span>
@@ -94,15 +95,8 @@
           </tbody>
     		</table>
 
-        <% if (raceCash.length > 10) { %>
-      		<div class="slideButton">
-      			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
-      			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
-      		</div>
-        <% } %>
-
     		<div class="key">
-    			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
+    			<p>(i) Incumbent</p>
     		</div>
       <% }) %>
   	</section>

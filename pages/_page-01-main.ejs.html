@@ -8,15 +8,18 @@
 
   <div class="container-lg mainCF">
   	<nav>
-  		<button class="current">MN GOV</button>
-  		<button>U.S. HOUSE</button>
-  		<button>U.S. SENATE</button>
+      <ul>
+    		<li class="current"><a href="">MN GOV</a></li>
+    		<li><a>U.S. HOUSE</a></li>
+    		<li><a>U.S. SENATE</a></li>
+      </ul>
   	</nav>
 
   	<section>
   		<h4>Walz is winning fundraising race </h4>
   		<p class="timestamp">April 16, 2018</p>
   		<p>At the end of 2017, U.S. Rep. Tim Walz, currently representing Minnesota's first congressional district, had brought in more than twice as much as any other candidate in the governor's race. This figure includes any loans a candidate may have taken out.</p>
+      <p>Former Gov. Tim Pawlenty, who announced his candidacy in early April, doesn't appear in these lists because he has not yet had to file campaign finance disclosure forms.</p>
   		<table class="raisedTable">
         <thead>
     			<tr>
@@ -30,7 +33,7 @@
         <tbody>
           <% let govReceipts = _.sortBy(governor, g => parseFloat(g.totReceipts || 0)).reverse(); %>
           <% _.each(govReceipts, (g, i) => { %>
-      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 9 ? 'nest' : '' %>">
       				<td class="party"><span></span></td>
       				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
       				<td class="fundsRaised">$<%= parseFloat(g.totReceipts || 0).toLocaleString() %></td>
@@ -48,7 +51,7 @@
   			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
   		</div>
   		<div class="key">
-  			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
+  			<p><span class="outKey"></span> Dropped out</p>
   		</div>
   	</section>
 
@@ -74,7 +77,7 @@
       				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
       				<td class="COH">$<%= parseFloat(g.endCash || 0).toLocaleString() %></td>
       				<td class="dataBar">
-                <% let w = parseFloat(g.endCash || 0) / parseFloat(govCache[0].endCash || 0) * 100 %>
+                <% let w = parseFloat(g.endCash || 0) / parseFloat(govCache[0].totReceipts || 0) * 100 %>
                 <span class="percentBar" style="width: <%= w %>%"></span>
               </td>
       			</tr>
