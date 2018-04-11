@@ -20,31 +20,31 @@ utilsFn({ });
 
 //slidedown extras in list
 $(document).ready(function(){
-    $("#moreRaised").click(function(){
-        $(".raisedTable .nest").slideDown(1500,function(){
-	    	$("#moreRaised").hide();
-	    	$("#fewerRaised").show();
+    $(".moreRaised").click(function(){
+        $(this).parent().parent().find('.nest').slideDown(300,function(){
+	    	$(".moreRaised").hide();
+	    	$(".fewerRaised").show();
         	});
     });
 
-    $("#fewerRaised").click(function(){
-        $(".raisedTable .nest").slideUp(500,function(){
-        	$("#fewerRaised").hide();
-        	$("#moreRaised").show();
+    $(".fewerRaised").click(function(){
+        $(this).parent().parent().find('.nest').slideUp(500,function(){
+        	$(".fewerRaised").hide();
+        	$(".moreRaised").show();
         	});
     });
 
-    $("#moreCash").click(function(){
-        $(".cashTable .nest").slideDown(1500,function(){
-	    	$("#moreCash").hide();
-	    	$("#fewerCash").show();
+    $(".moreCash").click(function(){
+         $(this).parent().parent().find('.nest').slideDown(300,function(){
+	    	$(".moreCash").hide();
+	    	$(".fewerCash").show();
         	});
     });
 
-    $("#fewerCash").click(function(){
-        $(".cashTable .nest").slideUp(500,function(){
-        	$("#fewerCash").hide();
-        	$("#moreCash").show();
+    $(".fewerCash").click(function(){
+        $(this).parent().parent().find('.nest').slideUp(500,function(){
+        	$(".fewerCash").hide();
+        	$(".moreCash").show();
         	});
     });
 
