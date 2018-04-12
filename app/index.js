@@ -34,6 +34,20 @@ $(document).ready(function(){
         	});
     });
 
+    $(".moreSpent").click(function(){
+         $(this).parent().parent().find('.nest').slideDown(300,function(){
+            $(".moreSpent").hide();
+            $(".fewerSpent").show();
+            });
+    });
+
+    $(".fewerSpent").click(function(){
+        $(this).parent().parent().find('.nest').slideUp(500,function(){
+            $(".fewerSpent").hide();
+            $(".moreSpent").show();
+            });
+    });
+
     $(".moreCash").click(function(){
          $(this).parent().parent().find('.nest').slideDown(300,function(){
 	    	$(".moreCash").hide();

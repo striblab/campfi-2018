@@ -7,16 +7,21 @@
   </div>
 
   <div class="container-lg mainCF">
+    <!-- NAVIGATION -->
     <nav>
       <ul>
         <li><a href="http://www.startribune.com/478334513">MN GOV</a></li>
-        <li class="current"><a href="http://www.startribune.com/478994733">U.S. HOUSE</a></li>
         <li><a href="http://www.startribune.com/478994853">U.S. SENATE</a></li>
+        <li class="current"><a href="http://www.startribune.com/478994733">U.S. HOUSE</a></li>
       </ul>
     </nav>
 
-    <!-- RAISED -->
+    <!-- LEAD IN CHATTER -->
+    <section>
+      <p>Some lead in paragraph goes here.</p>
+    </section>
 
+    <!-- RAISED -->
   	<section>
   		<h4>Incumbents have a moneyed edge</h4>
   		<p class="timestamp">April 16, 2018</p>
@@ -44,7 +49,7 @@
             <tbody>
               <% let raceReceipts = _.sortBy(houseRace, r => parseFloat(r.raisedDisplay || 0)).reverse(); %>
               <% _.each(raceReceipts, (r, i) => { %>
-          			<tr class="<%= r.party %> <%= r.out === 1 ? 'out' : '' %> <%= i > 5 ? 'nest' : '' %>">
+          			<tr class="<%= r.party %> <%= r.out === "1" ? 'out' : '' %> <%= i > 5 ? 'nest' : '' %>">
           				<td class="party"><span></span></td>
           				<td class="candName"><%= r.firstname %> <%= r.lastname %>
                     <% if (r.incumbent === 'Y') { %>
@@ -68,6 +73,9 @@
         		</div>
           <% } %>
 
+          <div class="footnote">
+            <p></p>
+          </div>
 
         </div>
       <% }) %>
@@ -76,19 +84,21 @@
     <!-- /RAISED -->
 
     <!-- SPENT -->
-
     <section>
   		<h4>House spending</h4>
   		<p class="timestamp">April 16, 2018</p>
   		<p>Spending ipsum dolor sin amet</p>
+      <div class="key">
+        <p><span class="keyTitle">Key:</span><span class="keyIn">(i) Incumbent</span><span class="keyOut"></span> Dropped out</p>
+      </div>
 
       <% _.each(_.groupBy(house, 'race'), houseRace => {%>
       <% let totalSpent = _.sortBy(houseRace, r => parseFloat(r.spentDisplay || 0)).reverse(); %>
         <div class="eachDist">
-          <h5><%= houseRace[0].race %></h5>
-
+          
       		<table class="spentTable">
             <thead>
+              <h5><%= houseRace[0].race %></h5>
         			<tr>
         				<th class="party"></th>
         				<th class="candName"></th>
@@ -100,7 +110,7 @@
             <tbody>
               <% let raceSpent = _.sortBy(houseRace, r => parseFloat(r.spentDisplay || 0)).reverse(); %>
               <% _.each(raceSpent, (r, i) => { %>
-          			<tr class="<%= r.party %> <%= r.out === 1 ? 'out' : '' %> <%= i > 5 ? 'nest' : '' %>">
+          			<tr class="<%= r.party %> <%= r.out === "1" ? 'out' : '' %> <%= i > 5 ? 'nest' : '' %>">
           				<td class="party"><span></span></td>
                   <td class="candName"><%= r.firstname %> <%= r.lastname %>
                     <% if (r.incumbent === 'Y') { %>
@@ -124,9 +134,10 @@
         		</div>
           <% } %>
 
-      		<div class="key">
-      			<p>(i) Incumbent <span class="outKey"></span> Dropped out</p>
-      		</div>
+          <div class="footnote">
+            <p></p>
+          </div>
+
         </div>
       <% }) %>
   	</section>
@@ -134,7 +145,6 @@
     <!-- /SPENT -->
 
     <!-- CASH -->
-
   	<section>
   		<h4>Warchest size varies greatly</h4>
   		<p class="timestamp">April 16, 2018</p>
@@ -162,7 +172,7 @@
             <tbody>
               <% let raceCash = _.sortBy(houseRace, r => parseFloat(r.cashDisplay || 0)).reverse(); %>
               <% _.each(raceCash, (r, i) => { %>
-          			<tr class="<%= r.party %> <%= r.out === 1 ? 'out' : '' %> <%= i > 5 ? 'nest' : '' %>">
+          			<tr class="<%= r.party %> <%= r.out === "1" ? 'out' : '' %> <%= i > 5 ? 'nest' : '' %>">
           				<td class="party"><span></span></td>
                   <td class="candName"><%= r.firstname %> <%= r.lastname %>
                     <% if (r.incumbent === 'Y') { %>
@@ -186,10 +196,19 @@
         		</div>
           <% } %>
 
+          <div class="footnote">
+            <p></p>
+          </div>
+
+        </div>
       <% }) %>
   	</section>
 
     <!-- /CASH -->
 
+    <!-- FOOTER/SOURCES -->
+    <footer>
+      <p>Source: <a href="https://www.fec.gov/data/">U.S. Federal Elections Commission</a></p>
+    </footer>
   </div>
 </div>

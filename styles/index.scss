@@ -18,6 +18,10 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 .strib.strib-styles.strib-styles-specifically {
   @import 'project';
 
+
+
+// Header styles
+
   .headerCF {
     text-align: center;
     max-width: 900px;
@@ -45,6 +49,9 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   .mainCF {
     max-width: 525px;
   }
+
+
+// Nav styles
 
   nav {
     width: 100%;
@@ -93,6 +100,9 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
    color: #666;
  }
 
+
+// Module styles
+
   section {
     margin-bottom: 60px;
   }
@@ -133,9 +143,12 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     margin-bottom: -2px;
   }
 
+
+// Table styles
+
   section h5{
     font-size: .85em;
-    margin-bottom: -15px;
+    margin-bottom: -16px;
   }
 
   section .eachDist{
@@ -156,7 +169,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   }
 
   table .fundsRaised,
-  table .COH {
+  table .COH, table .spent {
     text-align: right;
     padding: 0;
   }
@@ -225,6 +238,9 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     font-size: 0.8em;
   }
 
+
+// Slider nonsense
+
   section div.slideButton button {
     background-color: white;
     border: none;
@@ -245,15 +261,41 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   }
 
   section div.slideButton button.fewerRaised,
-  section div.slideButton button.fewerCash {
+  section div.slideButton button.fewerCash,
+  section div.slideButton button.fewerSpent {
     display: none;
   }
 
-  @media only screen and (min-width: 768px){
+  footer p{
+    font-family: 'Benton Sans';
+    font-size: .8em;
+  }
+
+
+// For smaller screen sizes!
+
+  @media only screen and (max-width: 500px){
     
-//    table td.dataBar {
-//      width: 25%;
-//    }
+    table td.dataBar {
+      width: 25%;
+    }
+
+  }
+
+  @media only screen and (max-width: 400px){
+
+    nav ul li{
+      margin-right: 5px;
+    }
+
+    section .timestamp {
+      text-align: left;
+      margin-top: 0px;
+    }
+
+    table td.dataBar {
+      display: none;
+    }
 
   }
 
