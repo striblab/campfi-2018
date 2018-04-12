@@ -1,29 +1,29 @@
-Race,Lastname,Firstname,Incumbent,Party,Out,YE17RecTotContrib,YE17RecTot,YE17ExpTot,YE17COH
-District 1,Hagedorn,Jim,N,R,0,502737,502979,221384,281820
-District 1,Feehan,Dan,N,D,0,356467,407117,120256,286861
-District 1,Nelson,Carla,N,R,0,167831,217831,49173,168658
-District 1,Sullivan,Joe,N,D,0,159191,189191,60371,128820
-District 1,Wright,Rich,N,D,0,61307,131807,51106,80701
-District 1,Jensen,Vicki,N,D,0,58895,61395,60337,1058
-District 1,Austinson,John Wayne,N,D,0,18449,20200,20200,0
-District 1,Minehart,Colin,N,D,1,0,200,200,287
-District 2,Lewis,Jason,Y,R,0,972677,984925,277171,717591
-District 2,Craig,Angie,N,D,0,550482,558161,138154,432509
-District 2,Erdmann,Jeff,N,D,0,104792,110134,95704,11431
-District 3,Paulsen,Erik,Y,R,0,1977297,1984138,803099,1548008
-District 3,Phillips,Dean,N,D,0,1212739,1213582,595745,617837
-District 3,Jennings,Adam,N,D,0,237388,440602,187545,253058
-District 3,Santa Maria,Brian,N,D,0,12383,15383,9749,5634
-District 3,Donahue,Alicia,N,D,1,1771,1771,1590,181
-District 4,McCollum,Betty,Y,D,0,330966,331746,301338,155080
-District 4,Ryan,Gregory,N,R,0,145,185,2021,1160
-District 5,Ellison,Keith,Y,D,0,1765172,1955620,1937567,507763
-District 5,Abdulahi,Jamal,N,D,0,65997,65997,65997,0
-District 6,Emmer,Tom,Y,R,0,1011557,1151055,623174,665446
-District 6,Todd,Ian,N,D,0,661,661,293,368
-District 7,Peterson,Collin,Y,D,0,625718,628614,204936,993344
-District 7,Hughes,David,N,R,0,32325,74325,45777,28820
-District 7,Miller,Tim,N,R,0,51942,51942,25019,26923
-District 7,Prosch,Matt,N,R,0,600,600,0,600
-District 8,Stauber,Pete,N,R,0,256229,256229,119576,136653
-District 8,Phifer,Leah,N,D,0,30120,35121,24557,10564
+race,fec_race_link,lastname,firstname,incumbent,party,out,fec_link,raised_display,spent_display,cash_display,raised_ye_2017,spent_ye_2017,cash_ye_2017
+District 1,https://www.fec.gov/data/elections/house/MN/01/2018/,Hagedorn,Jim,N,R,0,https://www.fec.gov/data/candidate/H0MN01045/,502979,221384,281820,,,
+District 1,https://www.fec.gov/data/elections/house/MN/01/2018/,Feehan,Dan,N,D,0,https://www.fec.gov/data/candidate/H8MN01279/,407117,120256,286861,,,
+District 1,https://www.fec.gov/data/elections/house/MN/01/2018/,Nelson,Carla,N,R,0,https://www.fec.gov/data/candidate/H8MN01329/,217831,49173,168658,,,
+District 1,https://www.fec.gov/data/elections/house/MN/01/2018/,Sullivan,Joe,N,D,0,https://www.fec.gov/data/candidate/H8MN01295/,189191,60371,128820,,,
+District 1,https://www.fec.gov/data/elections/house/MN/01/2018/,Wright,Rich,N,D,0,https://www.fec.gov/data/candidate/H8MN01303/,131807,51106,80701,,,
+District 1,https://www.fec.gov/data/elections/house/MN/01/2018/,Jensen,Vicki,N,D,0,https://www.fec.gov/data/candidate/H8MN01253/,61395,60337,1058,,,
+District 1,https://www.fec.gov/data/elections/house/MN/01/2018/,Austinson,John Wayne,N,D,0,https://www.fec.gov/data/candidate/H8MN01287/,20200,20200,0,,,
+District 1,https://www.fec.gov/data/elections/house/MN/01/2018/,Minehart,Colin,N,D,1,https://www.fec.gov/data/candidate/H8MN01261/,200,200,287,,,
+District 2,https://www.fec.gov/data/elections/house/MN/02/2018/,Lewis,Jason,Y,R,0,https://www.fec.gov/data/candidate/H6MN02149/,984925,277171,717591,,,
+District 2,https://www.fec.gov/data/elections/house/MN/02/2018/,Craig,Angie,N,D,0,https://www.fec.gov/data/candidate/H6MN02131/,558161,138154,432509,,,
+District 2,https://www.fec.gov/data/elections/house/MN/02/2018/,Erdmann,Jeff,N,D,0,https://www.fec.gov/data/candidate/H8MN02079/,110134,95704,11431,,,
+District 3,https://www.fec.gov/data/elections/house/MN/03/2018/,Paulsen,Erik,Y,R,0,https://www.fec.gov/data/candidate/H8MN03077/,1984138,803099,1548008,,,
+District 3,https://www.fec.gov/data/elections/house/MN/03/2018/,Phillips,Dean,N,D,0,https://www.fec.gov/data/candidate/H8MN03143/,1213582,595745,617837,,,
+District 3,https://www.fec.gov/data/elections/house/MN/03/2018/,Jennings,Adam,N,D,0,https://www.fec.gov/data/candidate/H8MN03150/,440602,187545,253058,,,
+District 3,https://www.fec.gov/data/elections/house/MN/03/2018/,Santa Maria,Brian,N,D,0,https://www.fec.gov/data/candidate/H8MN03127/,15383,9749,5634,,,
+District 3,https://www.fec.gov/data/elections/house/MN/03/2018/,Donahue,Alicia,N,D,1,https://www.fec.gov/data/candidate/H8MN03135/,1771,1590,181,,,
+District 4,https://www.fec.gov/data/elections/house/MN/04/2018/,McCollum,Betty,Y,D,0,https://www.fec.gov/data/candidate/H0MN04049/,331746,301338,155080,,,
+District 4,https://www.fec.gov/data/elections/house/MN/04/2018/,Ryan,Gregory,N,R,0,https://www.fec.gov/data/candidate/H6MN04236/,185,2021,1160,,,
+District 5,https://www.fec.gov/data/elections/house/MN/05/2018/,Ellison,Keith,Y,D,0,https://www.fec.gov/data/candidate/H6MN05183/,1955620,1937567,507763,,,
+District 5,https://www.fec.gov/data/elections/house/MN/05/2018/,Abdulahi,Jamal,N,D,0,https://www.fec.gov/data/candidate/H8MN05163/,65997,65997,0,,,
+District 6,https://www.fec.gov/data/elections/house/MN/06/2018/,Emmer,Tom,Y,R,0,https://www.fec.gov/data/candidate/H4MN06087/,1151055,623174,665446,,,
+District 6,https://www.fec.gov/data/elections/house/MN/06/2018/,Todd,Ian,N,D,0,https://www.fec.gov/data/candidate/H8MN06096/,661,293,368,,,
+District 7,https://www.fec.gov/data/elections/house/MN/07/2018/,Peterson,Collin,Y,D,0,https://www.fec.gov/data/candidate/H2MN07014/,628614,204936,993344,,,
+District 7,https://www.fec.gov/data/elections/house/MN/07/2018/,Hughes,David,N,R,0,https://www.fec.gov/data/candidate/H6MN07304/,74325,45777,28820,,,
+District 7,https://www.fec.gov/data/elections/house/MN/07/2018/,Miller,Tim,N,R,0,https://www.fec.gov/data/candidate/H8MN07086/,51942,25019,26923,,,
+District 7,https://www.fec.gov/data/elections/house/MN/07/2018/,Prosch,Matt,N,R,0,https://www.fec.gov/data/candidate/H8MN07094/,600,0,600,,,
+District 8,https://www.fec.gov/data/elections/house/MN/08/2018/,Stauber,Pete,N,R,0,https://www.fec.gov/data/candidate/H8MN08043/,256229,119576,136653,,,
+District 8,https://www.fec.gov/data/elections/house/MN/08/2018/,Phifer,Leah,N,D,0,https://www.fec.gov/data/candidate/H8MN08050/,35121,24557,10564,,,

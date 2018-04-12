@@ -1,5 +1,5 @@
-Race,Lastname,Firstname,Incumbent,Party,YE17RecTotContrib,YE17RecTot,YE17ExpTot,YE17COH
-Senate-Special,Smith,Tina,N,D,152524,152524,2687,149837
-Senate-Special,Housley,Karin,N,R,157856,157856,1737,156118
-Senate,Klobuchar,Amy,Y,D,4982576,5555439,1867297,5569814
-Senate,Newberger,Jim,N,R,44619,44619,31336,13282
+race,lastname,firstname,incumbent,party,out,fec_link,raised_display,spent_display,cash_display,raised_ye_2017,spent_ye_2017,cash_ye_2017
+Senate-Special,Smith,Tina,N,D,0,https://www.fec.gov/data/candidate/S8MN00578/?cycle=2018&election_full=false,152524,2687,149837,,,
+Senate-Special,Housley,Karin,N,R,0,https://www.fec.gov/data/candidate/S8MN00586/?cycle=2018&election_full=false,157856,1737,156118,,,
+Senate,Klobuchar,Amy,Y,D,0,https://www.fec.gov/data/candidate/S6MN00267/?tab=summary&cycle=2018&election_full=false,5555445,1867299,5569814,,,
+Senate,Newberger,Jim,N,R,0,https://www.fec.gov/data/candidate/S8MN00552/?cycle=2018&election_full=false,44619,31336,13282,,,
