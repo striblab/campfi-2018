@@ -2,16 +2,16 @@
   <div class="container-lg headerCF">
   	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Campaign Finance</h5>
   	<h1>Rep. Tim Walz leads money race in bid for Minnesota governor</h1>
-  	<p class="byline">Graphics by C.J. Sinner • <span>Star Tribune</span></p>
-  	<aside class="article-share"></aside>
+  	<p class="byline">By C.J. Sinner &amp; Alan Palazzolo • <span>Star Tribune</span></p>
+  	<!-- share -->
   </div>
 
   <div class="container-lg mainCF">
   	<nav>
       <ul>
-    		<li class="current"><a href="">MN GOV</a></li>
-    		<li><a>U.S. HOUSE</a></li>
-    		<li><a>U.S. SENATE</a></li>
+    		<li class="current"><a href="http://www.startribune.com/478334513">MN GOV</a></li>
+    		<li><a href="http://www.startribune.com/478994733">U.S. HOUSE</a></li>
+    		<li><a href="http://www.startribune.com/478994853">U.S. SENATE</a></li>
       </ul>
   	</nav>
 
@@ -33,6 +33,7 @@
         <tbody>
           <% let govReceipts = _.sortBy(governor, g => parseFloat(g.totReceipts || 0)).reverse(); %>
           <% _.each(govReceipts, (g, i) => { %>
+          <% if (i <= 15){ %>
       			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 9 ? 'nest' : '' %>">
       				<td class="party"><span></span></td>
       				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
@@ -42,14 +43,24 @@
                 <span class="percentBar" style="width: <%= w %>%"></span>
               </td>
       			</tr>
+          <% } %>
           <% }) %>
         </tbody>
   		</table>
 
   		<div class="slideButton">
-  			<button id="moreRaised"><span class="plus">+</span> More candidates</button>
-  			<button id="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
+  			<button class="moreRaised"><span class="plus">+</span> More candidates</button>
+  			<button class="fewerRaised"><span class="minus">&minus;</span> Fewer candidates</button>
   		</div>
+
+      <p>Other dropped out candidates: 
+        <% _.each(govReceipts, (g, i) => { %>
+          <% if (i > 15){ %>
+            <%= g.candFirstName %> <%= g.candLastName %>,
+          <% } %>
+        <% }) %>
+      </p>
+
   		<div class="key">
   			<p><span class="outKey"></span> Dropped out</p>
   		</div>
@@ -59,7 +70,8 @@
   		<h4>Cash rankings shuffle</h4>
   		<p class="timestamp">April 16, 2018</p>
   		<p>Republican Jeff Johnson, a Hennepin County Board member who ran for this position in 2014, had nearly as much cash in his war chest as State Auditor Rebecca Otto at the end of 2017.</p>
-  		<table class="cashTable">
+  		
+      <table class="cashTable">
         <thead>
     			<tr>
     				<th class="party"></th>
@@ -86,8 +98,8 @@
   		</table>
 
   		<div class="slideButton">
-  			<button id="moreCash"><span class="plus">+</span> More candidates</button>
-  			<button id="fewerCash"><span class="minus">&minus;</span> Fewer candidates</button>
+  			<button class="moreCash"><span class="plus">+</span> More candidates</button>
+  			<button class="fewerCash"><span class="minus">&minus;</span> Fewer candidates</button>
   		</div>
   		<div class="key">
   			<p><span class="outKey"></span> Dropped out</p>

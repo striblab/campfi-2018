@@ -170,6 +170,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     display: block;
     height: 5px;
     border-radius: 2px;
+    min-width: 2px;
   }
 
   table tr.D .percentBar {
@@ -232,8 +233,16 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     color: #666666;
   }
 
-  section div.slideButton button#fewerRaised,
-  section div.slideButton button#fewerCash {
+  section div.slideButton button.fewerRaised,
+  section div.slideButton button.fewerCash {
     display: none;
   }
+}
+
+@media only screen and (min-width: 768px){
+  
+  table td.dataBar {
+    width: 25%;
+  }
+
 }
