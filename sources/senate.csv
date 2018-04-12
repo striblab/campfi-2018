@@ -1,5 +1,5 @@
-Race,Lastname,Firstname,Incumbent,Party,Website,CommitteeName,YE17RecOthComm,YE17RecCandCon,YE17RecParty,YE17RecUnitemIndiv,YE17RecItemIndiv,YE17RecTotContrib,YE17RecTransf,YE17RecOffsets,YE17RecOther,YE17RecTot,YE17ExpOperating,YE17ExpRefunds,YE17ExpIndivRefunds,YE17ExpOther,YE17ExpTot,YE17COH
-Senate-Special,Smith,Tina,N,D,,Tina Smith for Minnesota,15000,5400,0,2074,130050,152524,0,0,0,152524,2687,0,0,0,2687,149837
-Senate-Special,Housley,Karin,N,R,,Karin Housley for Senate,0,0,0,2756,155100,157856,0,0,0,157856,1737,0,0,0,1737,156118
-Senate,Klobuchar,Amy,Y,D,,Klobuchar for Minnesota,1028222,0,5000,1044568,2904786,4982576,571147,753,963,5555439,1780527,7500,38887,40383,1867297,5569814
-Senate,Newberger,Jim,N,R,,Jim Newberger for United States Senate,0,0,0,13853,30766,44619,0,0,0,44619,31336,0,0,0,31336,13282
+Race,Lastname,Firstname,Incumbent,Party,YE17RecTotContrib,YE17RecTot,YE17ExpTot,YE17COH
+Senate-Special,Smith,Tina,N,D,152524,152524,2687,149837
+Senate-Special,Housley,Karin,N,R,157856,157856,1737,156118
+Senate,Klobuchar,Amy,Y,D,4982576,5555439,1867297,5569814
+Senate,Newberger,Jim,N,R,44619,44619,31336,13282

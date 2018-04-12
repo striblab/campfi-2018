@@ -94,7 +94,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
  }
 
   section {
-    margin-bottom: 45px;
+    margin-bottom: 60px;
   }
 
   section p {
@@ -110,8 +110,36 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     margin-top: -25px;
   }
 
+  section div.key p {
+    font-size: 0.7em;
+    line-height: 0;
+    margin-bottom: 25px;
+  }
+
+  section div.key p span.keyTitle{
+    text-transform: uppercase;
+    //font-size: 0.9em;
+  }
+
+  section div.key p span.keyIn, section div.key span.keyOut{
+    margin-left: 10px;
+  }
+
+  section div.key span.keyOut {
+    width: 20px;
+    height: 11px;
+    background-color: #EDEDED;
+    display: inline-block;
+    margin-bottom: -2px;
+  }
+
   section h5{
-    margin-bottom: 0;
+    font-size: .85em;
+    margin-bottom: -15px;
+  }
+
+  section .eachDist{
+    margin-bottom: 30px;
   }
 
   table {
@@ -137,6 +165,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     border-bottom: 1px solid #EEEEEE;
     padding: 6px 0 6px 5px;
     font-size: 0.9em;
+    vertical-align: middle;
   }
 
   table tr.D .party span {
@@ -196,24 +225,6 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     font-size: 0.8em;
   }
 
-  section div.key p {
-    //text-align: right;
-    font-size: 0.65em;
-    line-height: 0;
-    //margin-top: -20px;
-  }
-
-  section div.key span.outKey {
-    width: 25px;
-    height: 15px;
-    background-color: #EDEDED;
-    border-radius: 2px;
-    //border: 1px solid #999999;
-    display: inline-block;
-    margin-left: 10px;
-    margin-bottom: -2px;
-  }
-
   section div.slideButton button {
     background-color: white;
     border: none;
@@ -237,12 +248,15 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   section div.slideButton button.fewerCash {
     display: none;
   }
-}
 
-@media only screen and (min-width: 768px){
-  
-  table td.dataBar {
-    width: 25%;
+  @media only screen and (min-width: 768px){
+    
+//    table td.dataBar {
+//      width: 25%;
+//    }
+
   }
 
+
 }
+
