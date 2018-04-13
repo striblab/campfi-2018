@@ -2,7 +2,7 @@
   <div class="container-lg headerCF">
   	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Campaign Finance</h5>
   	<h1>Minnesota's open 1st district fundraising class is crowded</h1>
-  	<p class="byline">By C.J. Sinner &amp; Alan Palazzolo • <span>Star Tribune</span></p>
+  	<p class="byline">By C.J. Sinner and Alan Palazzolo • <span>Star Tribune</span></p>
     <!-- share -->
   </div>
 
@@ -95,7 +95,7 @@
       <% _.each(_.groupBy(house, 'race'), houseRace => {%>
       <% let totalSpent = _.sortBy(houseRace, r => parseFloat(r.spentDisplay || 0)).reverse(); %>
         <div class="eachDist">
-          
+
       		<table class="spentTable">
             <thead>
               <h5><%= houseRace[0].race %></h5>

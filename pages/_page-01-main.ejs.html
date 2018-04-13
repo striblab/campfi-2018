@@ -2,7 +2,7 @@
   <div class="container-lg headerCF">
   	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Campaign Finance</h5>
   	<h1>Rep. Tim Walz leads money race in bid for Minnesota governor</h1>
-  	<p class="byline">By C.J. Sinner &amp; Alan Palazzolo • <span>Star Tribune</span></p>
+  	<p class="byline">By C.J. Sinner and Alan Palazzolo • <span>Star Tribune</span></p>
   	<!-- share -->
   </div>
 
@@ -41,14 +41,14 @@
         </thead>
 
         <tbody>
-          <% let govReceipts = _.sortBy(governor, g => parseFloat(g.totReceipts || 0)).reverse(); %>
+          <% let govReceipts = _.sortBy(governor, g => parseFloat(g.raisedDisplay || 0)).reverse(); %>
           <% _.each(govReceipts, (g, i) => { %>
       			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 9 ? 'nest' : '' %>">
       				<td class="party"><span></span></td>
-      				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
-      				<td class="fundsRaised">$<%= parseFloat(g.totReceipts || 0).toLocaleString() %></td>
+      				<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+      				<td class="fundsRaised">$<%= parseFloat(g.raisedDisplay || 0).toLocaleString() %></td>
       				<td class="dataBar">
-                <% let w = parseFloat(g.totReceipts || 0) / parseFloat(govReceipts[0].totReceipts || 0) * 100 %>
+                <% let w = parseFloat(g.raisedDisplay || 0) / parseFloat(govReceipts[0].raisedDisplay || 0) * 100 %>
                 <span class="percentBar" style="width: <%= w %>%"></span>
               </td>
       			</tr>
@@ -68,6 +68,54 @@
 
     <!-- /RAISED -->
 
+    <!-- SPENT -->
+
+    <section>
+  		<h4>Spending TKTK</h4>
+  		<p class="timestamp">April 16, 2018</p>
+  		<p>Spending lorem ipsum dolor sin amet ...</p>
+      <div class="key">
+        <p><span class="keyTitle">Key:</span><span class="keyOut"></span> Dropped out</p>
+      </div>
+
+      <table class="spentTable">
+        <thead>
+    			<tr>
+    				<th class="party"></th>
+    				<th class="candName"></th>
+    				<th class="spent">Cash on hand</th>
+    				<th class="dataBar"></th>
+    			</tr>
+        </thead>
+
+        <tbody>
+          <% let govSpent = _.sortBy(governor, g => parseFloat(g.spentDisplay || 0)).reverse(); %>
+          <% _.each(govSpent, (g, i) => { %>
+      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+      				<td class="party"><span></span></td>
+      				<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+      				<td class="spent">$<%= parseFloat(g.spentDisplay || 0).toLocaleString() %></td>
+      				<td class="dataBar">
+                <% let w = parseFloat(g.spentDisplay || 0) / parseFloat(govSpent[0].spentDisplay || 0) * 100 %>
+                <span class="percentBar" style="width: <%= w %>%"></span>
+              </td>
+      			</tr>
+          <% }) %>
+        </tbody>
+  		</table>
+
+  		<div class="slideButton">
+  			<button class="moreSpent"><span class="plus">+</span> More candidates</button>
+  			<button class="fewerSpent"><span class="minus">&minus;</span> Fewer candidates</button>
+  		</div>
+
+      <div class="footnote">
+        <p></p>
+      </div>
+  	</section>
+
+    <!-- /SPENT -->
+
     <!-- CASH -->
 
   	<section>
@@ -77,7 +125,7 @@
       <div class="key">
         <p><span class="keyTitle">Key:</span><span class="keyOut"></span> Dropped out</p>
       </div>
-      
+
       <table class="cashTable">
         <thead>
     			<tr>
@@ -89,14 +137,14 @@
         </thead>
 
         <tbody>
-          <% let govCache = _.sortBy(governor, g => parseFloat(g.endCash || 0)).reverse(); %>
-          <% _.each(govCache, (g, i) => { %>
+          <% let govCash = _.sortBy(governor, g => parseFloat(g.cashDisplay || 0)).reverse(); %>
+          <% _.each(govCash, (g, i) => { %>
       			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
       				<td class="party"><span></span></td>
-      				<td class="candName"><%= g.candFirstName %> <%= g.candLastName %> <span></span></td>
-      				<td class="COH">$<%= parseFloat(g.endCash || 0).toLocaleString() %></td>
+      				<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+      				<td class="COH">$<%= parseFloat(g.cashDisplay || 0).toLocaleString() %></td>
       				<td class="dataBar">
-                <% let w = parseFloat(g.endCash || 0) / parseFloat(govCache[0].totReceipts || 0) * 100 %>
+                <% let w = parseFloat(g.cashDisplay || 0) / parseFloat(govCash[0].cashDisplay || 0) * 100 %>
                 <span class="percentBar" style="width: <%= w %>%"></span>
               </td>
       			</tr>
