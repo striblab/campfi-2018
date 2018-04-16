@@ -24,7 +24,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
   .headerCF {
     text-align: center;
-    max-width: 900px;
+    max-width: 850px;
   }
 
   .headerCF h1 {
@@ -32,9 +32,11 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     line-height: 1.1em;
   }
 
-  .headerCF h5 {
+  .headerCF h5, .headerCF h5 span {
     text-transform: uppercase;
-    font-size: 1.03em;
+    font-size: .9em;
+    letter-spacing: .1em;
+    padding-top: 40px;
   }
 
   .headerCF h5 span,
@@ -57,7 +59,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     width: 100%;
     display: block;
     text-align: center;
-    margin: 25px auto;
+    margin: 40px auto 25px auto;
   }
 
   nav ul li{
@@ -107,17 +109,21 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     margin-bottom: 60px;
   }
 
+  section h4{
+    font-size: 1.1em;
+  }
+
   section p {
     font-family: 'Benton Sans';
     font-size: 0.9em;
-    margin-top: 5px;
+    padding-top: 5px;
   }
 
-  section .timestamp {
+  section p.timestamp {
     text-transform: uppercase;
     font-size: 0.6em;
     text-align: right;
-    margin-top: -25px;
+    margin-top: -27px;
   }
 
   section div.key p {
@@ -166,6 +172,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     text-transform: uppercase;
     color: #080808;
     font-weight: normal;
+    padding-bottom: 5px!important;
   }
 
   table .fundsRaised,
@@ -280,6 +287,11 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
       width: 25%;
     }
 
+    section p.timestamp {
+      text-align: left;
+      margin-top: 0px;
+    }
+
   }
 
   @media only screen and (max-width: 400px){
@@ -291,11 +303,6 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     nav ul li:last-child {
       display: inline-block;
       margin-top: 10px;
-    }
-
-    section .timestamp {
-      text-align: left;
-      margin-top: 0px;
     }
 
     table td.dataBar {
