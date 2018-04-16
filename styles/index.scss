@@ -210,6 +210,17 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     display: block;
   }
 
+  table tr.I .party span {
+    width: 14px;
+    height: 14px;
+    background-color: #fee090;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    margin: auto;
+    display: block;
+  }
+
   table td.dataBar {
     width: 40%;
     margin-left: 5px;
@@ -228,6 +239,10 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
   table tr.R .percentBar {
     background-color: #C0272D;
+  }
+
+  table tr.I .percentBar {
+    background-color: #fee090;
   }
 
   table tr.nest {
@@ -276,6 +291,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   footer p{
     font-family: 'Benton Sans';
     font-size: .8em;
+    margin-bottom: 10px;
   }
 
 
