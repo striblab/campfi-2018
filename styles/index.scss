@@ -41,6 +41,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
   .headerCF h5 span{
     font-size: .96em;
+    letter-spacing: .1em;
   }
 
   .headerCF h5 span,
@@ -297,6 +298,10 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     display: none;
   }
 
+  footer {
+    margin-bottom: 70px;
+  }
+
   footer p{
     font-family: 'Benton Sans';
     font-size: .8em;
@@ -304,12 +309,13 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   }
 
 
+
 // For smaller screen sizes!
 
   @media only screen and (max-width: 500px){
     
     table tr td{
-      font-size: 1em;s
+      font-size: 1em;
     }
 
     table td.dataBar {
