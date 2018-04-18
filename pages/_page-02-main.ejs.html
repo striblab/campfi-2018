@@ -48,7 +48,7 @@
             <tbody>
               <% let raceReceipts = _.sortBy(houseRace, r => parseFloat(r.raisedDisplay || 0)).reverse(); %>
               <% _.each(raceReceipts, (r, i) => { %>
-          			<tr class="<%= r.party %> <%= r.out === "1" ? 'out' : '' %> <%= i > 5 ? 'nest' : '' %>">
+          			<tr class="<%= r.party %> <%= r.out === "1" ? 'out' : '' %> <%= i > 6 ? 'nest' : '' %>">
           				<td class="party"><span></span></td>
           				<td class="candName"><%= r.firstname %> <%= r.lastname %>
                     <% if (r.incumbent === 'Y') { %>
@@ -65,7 +65,7 @@
             </tbody>
       		</table>
 
-          <% if (raceReceipts.length > 6) { %>
+          <% if (raceReceipts.length > 7) { %>
         		<div class="slideButton">
         			<button class="moreRaised"><span class="plus">+</span> Show more</button>
         			<button class="fewerRaised"><span class="minus">&minus;</span> Show fewer</button>
@@ -109,7 +109,7 @@
             <tbody>
               <% let raceSpent = _.sortBy(houseRace, r => parseFloat(r.spentDisplay || 0)).reverse(); %>
               <% _.each(raceSpent, (r, i) => { %>
-          			<tr class="<%= r.party %> <%= r.out === "1" ? 'out' : '' %> <%= i > 5 ? 'nest' : '' %>">
+          			<tr class="<%= r.party %> <%= r.out === "1" ? 'out' : '' %> <%= i > 6 ? 'nest' : '' %>">
           				<td class="party"><span></span></td>
                   <td class="candName"><%= r.firstname %> <%= r.lastname %>
                     <% if (r.incumbent === 'Y') { %>
@@ -126,7 +126,7 @@
             </tbody>
       		</table>
 
-          <% if (raceSpent.length > 6) { %>
+          <% if (raceSpent.length > 7) { %>
         		<div class="slideButton">
         			<button class="moreSpent"><span class="plus">+</span> Show more</button>
         			<button class="fewerSpent"><span class="minus">&minus;</span> Show fewer</button>
@@ -171,7 +171,7 @@
             <tbody>
               <% let raceCash = _.sortBy(houseRace, r => parseFloat(r.cashDisplay || 0)).reverse(); %>
               <% _.each(raceCash, (r, i) => { %>
-          			<tr class="<%= r.party %> <%= r.out === "1" ? 'out' : '' %> <%= i > 5 ? 'nest' : '' %>">
+          			<tr class="<%= r.party %> <%= r.out === "1" ? 'out' : '' %> <%= i > 6 ? 'nest' : '' %>">
           				<td class="party"><span></span></td>
                   <td class="candName"><%= r.firstname %> <%= r.lastname %>
                     <% if (r.incumbent === 'Y') { %>
@@ -188,7 +188,7 @@
             </tbody>
       		</table>
 
-          <% if (raceCash.length > 6) { %>
+          <% if (raceCash.length > 7) { %>
         		<div class="slideButton">
         			<button class="moreCash"><span class="plus">+</span> Show more</button>
         			<button class="fewerCash"><span class="minus">&minus;</span> Show fewer</button>
