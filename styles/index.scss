@@ -35,7 +35,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   .headerCF h5, .headerCF h5 span {
     text-transform: uppercase;
     font-size: .9em;
-    letter-spacing: .1em;
+    letter-spacing: .08em;
     padding-top: 40px;
   }
 
@@ -308,6 +308,10 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
   @media only screen and (max-width: 500px){
     
+    table tr td{
+      font-size: 1em;s
+    }
+
     table td.dataBar {
       width: 25%;
     }
@@ -315,6 +319,14 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     section p.timestamp {
       text-align: left;
       margin-top: 0px;
+    }
+
+    section h4{
+      font-size: 1.2em;
+    }
+
+    section p {
+      font-size: 1em;
     }
 
   }
