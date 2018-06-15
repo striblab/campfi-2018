@@ -1,7 +1,7 @@
 <div class="strib strib-styles strib-styles-specifically">
   <div class="container-lg headerCF">
   	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Campaign Finance</h5>
-  	<h1>Walz, Pawlenty lead money race two months before primaries</h1>
+  	<h1>Pawlenty, Walz lead money race two months before primaries</h1>
   	<p class="byline">By C.J. Sinner and Alan Palazzolo • <span>Star Tribune</span></p>
   	<!-- share -->
   </div>
@@ -23,6 +23,53 @@
       <p>Figures below include filings starting Jan. 1, 2017 and ending May 31, 2018. Reports for some candidates who dropped out or withdrew from the ballot had not yet been released Friday morning.</p>
       <p>The next filing deadline is July 30.</p>
     </section>
+
+    <!-- CASH -->
+
+    <section>
+      <h4>Pawlenty, Walz have the most cash</h4>
+      <p class="timestamp" style="margin-top:-32px">June 15, 2018</p>
+      <div class="key">
+        <p><span class="keyTitle">Key:</span><span class="keyOut"></span> Dropped out</p>
+      </div>
+
+      <table class="cashTable">
+        <thead>
+          <tr>
+            <th class="party"></th>
+            <th class="candName"></th>
+            <th class="COH">Cash on hand</th>
+            <th class="dataBar"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% let govCash = _.sortBy(governor, g => parseFloat(g.cashDisplay || 0)).reverse(); %>
+          <% _.each(govCash, (g, i) => { %>
+            <tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
+              <td class="party"><span></span></td>
+              <td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+              <td class="COH">$<%= parseFloat(g.cashDisplay || 0).toLocaleString() %></td>
+              <td class="dataBar">
+                <% let w = parseFloat(g.cashDisplay || 0) / parseFloat(govCash[0].cashDisplay || 0) * 100 %>
+                <span class="percentBar" style="width: <%= w %>%"></span>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+      <div class="slideButton">
+        <button class="moreCash"><span class="plus">+</span> Show more</button>
+        <button class="fewerCash"><span class="minus">&minus;</span> Show fewer</button>
+      </div>
+
+      <div class="footnote">
+        <p></p>
+      </div>
+    </section>
+
+    <!-- /CASH -->
 
     <!-- RAISED -->
   	<section>
@@ -116,53 +163,6 @@
   	</section>
 
     <!-- /SPENT -->
-
-    <!-- CASH -->
-
-  	<section>
-  		<h4>Pawlenty, Walz have the most cash</h4>
-  		<p class="timestamp">June 15, 2018</p>
-      <div class="key">
-        <p><span class="keyTitle">Key:</span><span class="keyOut"></span> Dropped out</p>
-      </div>
-
-      <table class="cashTable">
-        <thead>
-    			<tr>
-    				<th class="party"></th>
-    				<th class="candName"></th>
-    				<th class="COH">Cash on hand</th>
-    				<th class="dataBar"></th>
-    			</tr>
-        </thead>
-
-        <tbody>
-          <% let govCash = _.sortBy(governor, g => parseFloat(g.cashDisplay || 0)).reverse(); %>
-          <% _.each(govCash, (g, i) => { %>
-      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 10 ? 'nest' : '' %>">
-      				<td class="party"><span></span></td>
-      				<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
-      				<td class="COH">$<%= parseFloat(g.cashDisplay || 0).toLocaleString() %></td>
-      				<td class="dataBar">
-                <% let w = parseFloat(g.cashDisplay || 0) / parseFloat(govCash[0].cashDisplay || 0) * 100 %>
-                <span class="percentBar" style="width: <%= w %>%"></span>
-              </td>
-      			</tr>
-          <% }) %>
-        </tbody>
-  		</table>
-
-  		<div class="slideButton">
-  			<button class="moreCash"><span class="plus">+</span> Show more</button>
-  			<button class="fewerCash"><span class="minus">&minus;</span> Show fewer</button>
-  		</div>
-
-      <div class="footnote">
-        <p></p>
-      </div>
-  	</section>
-
-    <!-- /CASH -->
 
     <!-- FOOTER/SOURCES -->
     <footer>
