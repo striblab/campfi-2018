@@ -21,7 +21,7 @@ utilsFn({ });
 //slidedown extras in list
 $(document).ready(function(){
     $(".moreRaised").click(function(){
-        $(this).parent().parent().find('.nest').slideDown(300,function(){
+        $(this).parent().parent().find('.nest').slideDown(500,function(){
 	    	$(".moreRaised").hide();
 	    	$(".fewerRaised").show();
         	});

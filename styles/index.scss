@@ -121,6 +121,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
   section h4{
     font-size: 1.1em;
+    float: left;
   }
 
   section p {
@@ -133,13 +134,14 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     text-transform: uppercase;
     font-size: 0.6em;
     text-align: right;
-    margin-top: -30px;
+    padding-top: 18px;
   }
 
   section div.key p {
     font-size: 0.7em;
     line-height: 0;
     margin-bottom: 25px;
+    clear: both;
   }
 
   section div.key p span.keyTitle{
@@ -324,11 +326,12 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
     section p.timestamp {
       text-align: left;
-      margin-top: 0px;
+      padding-top: 0px;
     }
 
     section h4{
       font-size: 1.2em;
+      float: none;
     }
 
     section p {
