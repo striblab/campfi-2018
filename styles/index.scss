@@ -137,6 +137,10 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     padding-top: 18px;
   }
 
+  section p.chat{
+    clear: both;
+  }
+
   section div.key p {
     font-size: 0.7em;
     line-height: 0;
@@ -265,7 +269,6 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     background-color: #F7F7F7;
     color: #404040;
     opacity: 0.6;
-    //display:none;
   }
 
   table td.candName span {
