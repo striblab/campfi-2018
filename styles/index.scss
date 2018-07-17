@@ -238,7 +238,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   }
 
   table td.dataBar {
-    width: 40%;
+    width: 35%;
     margin-left: 5px;
   }
 
@@ -324,7 +324,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     }
 
     table td.dataBar {
-      width: 25%;
+      display: none;
     }
 
     section p.timestamp {
@@ -352,10 +352,6 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     nav ul li:last-child {
       display: inline-block;
       margin-top: 10px;
-    }
-
-    table td.dataBar {
-      display: none;
     }
 
   }
