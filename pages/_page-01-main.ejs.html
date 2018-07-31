@@ -1,7 +1,7 @@
 <div class="strib strib-styles strib-styles-specifically">
   <div class="container-lg headerCF">
   	<h5 class="font-popular-light">Campaign Finance</h5>
-  	<h1>Pawlenty, Walz lead money race two months before primaries</h1>
+  	<h1>In last weeks before primary, Pawlenty, Walz maintain money lead</h1>
   	<p class="byline">By C.J. Sinner and Alan Palazzolo • <span>Star Tribune</span></p>
   	<!-- share -->
   </div>
@@ -19,19 +19,20 @@
     <!-- LEAD IN TEXT -->
     <section class="leadin">
       <p>Though neither was endorsed at their party's nominating conventions, Republican candidate Tim Pawlenty and DFL candidate Tim Walz have raised significantly more campaign cash than their closest rivals as both head toward contested primaries in August, according to campaign finance reports filed June 15.</p>
-      <p>The reports include only money raised and spent through May 31 — several days before <a href="http://www.startribune.com/republican-convention-endorses-jeff-johnson-for-governor/484338761/">Republicans endorsed Hennepin County Commissioner Jeff Johnson</a> and the <a href="http://www.startribune.com/minnesota-dfl-endorses-erin-murphy-for-governor/484315371/">DFL endorsed state Rep. Erin Murphy</a> at their respective conventions. Attorney General Lori Swanson, who launched her bid for governor earlier this month, is also not included in the reports.</p>
+      <p>The reports include only money raised and spent through July 23 — several days before <a href="http://www.startribune.com/republican-convention-endorses-jeff-johnson-for-governor/484338761/">Republicans endorsed Hennepin County Commissioner Jeff Johnson</a> and the <a href="http://www.startribune.com/minnesota-dfl-endorses-erin-murphy-for-governor/484315371/">DFL endorsed state Rep. Erin Murphy</a> at their respective conventions. Attorney General Lori Swanson, who launched her bid for governor earlier this month, is also not included in the reports.</p>
       <p>Figures below include filings starting Jan. 1, 2017 and ending May 31, 2018. Reports for some candidates who dropped out or withdrew from the ballot had not yet been released Friday morning.</p>
       <p>The next filing deadline is July 30.</p>
+        <div class="key">
+          <p><span class="keyTitle">Key:</span><!-- <span class="keyOut"></span> Dropped out --><span class="keyEnd"> Party endorsed</span></p>
+        </div>
     </section>
 
     <!-- CASH -->
 
     <section>
       <h4>Pawlenty, Walz have the most cash</h4>
-      <p class="timestamp">June 15, 2018</p>
-      <div class="key">
-        <p><span class="keyTitle">Key:</span><span class="keyOut"></span> Dropped out</p>
-      </div>
+      <p class="timestamp">July 31, 2018</p>
+
 
       <table class="cashTable">
         <thead>
@@ -46,9 +47,9 @@
         <tbody>
           <% let govCash = _.sortBy(governor, g => parseFloat(g.cashDisplay || 0)).reverse(); %>
           <% _.each(govCash, (g, i) => { %>
-            <tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 6 ? 'nest' : '' %>">
+            <tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 4 ? 'nest' : '' %>">
               <td class="party"><span></span></td>
-              <td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+              <td class="candName"><%= g.firstname %> <%= g.lastname %> <span><% if (g['endorsement'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campfi-2018/assets/images/check.svg"></span><% } %></span></td>
               <td class="COH">$<%= parseFloat(g.cashDisplay || 0).toLocaleString() %></td>
               <td class="dataBar">
                 <% let w = parseFloat(g.cashDisplay || 0) / parseFloat(govCash[0].cashDisplay || 0) * 100 %>
@@ -74,10 +75,10 @@
     <!-- RAISED -->
   	<section>
   		<h4>Millions raised before contested primaries</h4>
-  		<p class="timestamp">June 15, 2018</p>
-      <div class="key">
+  		<p class="timestamp">July 31, 2018</p>
+<!--       <div class="key">
         <p><span class="keyTitle">Key:</span><span class="keyOut"></span> Dropped out</p>
-      </div>
+      </div> -->
 
   		<table class="raisedTable">
         <thead>
@@ -92,9 +93,9 @@
         <tbody>
           <% let govReceipts = _.sortBy(governor, g => parseFloat(g.raisedDisplay || 0)).reverse(); %>
           <% _.each(govReceipts, (g, i) => { %>
-      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 6 ? 'nest' : '' %>">
+      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 4 ? 'nest' : '' %>">
       				<td class="party"><span></span></td>
-      				<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+      				<td class="candName"><%= g.firstname %> <%= g.lastname %> <span><% if (g['endorsement'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campfi-2018/assets/images/check.svg"></span><% } %></span></td>
       				<td class="fundsRaised">$<%= parseFloat(g.raisedDisplay || 0).toLocaleString() %></td>
       				<td class="dataBar">
                 <% let w = parseFloat(g.raisedDisplay || 0) / parseFloat(govReceipts[0].raisedDisplay || 0) * 100 %>
@@ -121,10 +122,10 @@
 
     <section>
   		<h4>Democrats lead campaign spending</h4>
-  		<p class="timestamp">June 15, 2018</p>
-      <div class="key">
+  		<p class="timestamp">July 31, 2018</p>
+<!--       <div class="key">
         <p><span class="keyTitle">Key:</span><span class="keyOut"></span> Dropped out</p>
-      </div>
+      </div> -->
 
       <table class="spentTable">
         <thead>
@@ -139,9 +140,9 @@
         <tbody>
           <% let govSpent = _.sortBy(governor, g => parseFloat(g.spentDisplay || 0)).reverse(); %>
           <% _.each(govSpent, (g, i) => { %>
-      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 6 ? 'nest' : '' %>">
+      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 4 ? 'nest' : '' %>">
       				<td class="party"><span></span></td>
-      				<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+      				<td class="candName"><%= g.firstname %> <%= g.lastname %> <span><% if (g['endorsement'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campfi-2018/assets/images/check.svg"></span><% } %></span></td>
       				<td class="spent">$<%= parseFloat(g.spentDisplay || 0).toLocaleString() %></td>
       				<td class="dataBar">
                 <% let w = parseFloat(g.spentDisplay || 0) / parseFloat(govSpent[0].spentDisplay || 0) * 100 %>
