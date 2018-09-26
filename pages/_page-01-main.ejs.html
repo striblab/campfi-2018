@@ -1,7 +1,7 @@
 <div class="strib strib-styles strib-styles-specifically">
   <div class="container-lg headerCF">
   	<h5 class="font-popular-light">Campaign Finance</h5>
-  	<h1>Looking toward general, Walz, Johnson have $1 million to spend</h1>
+  	<h1>Looking toward general, Walz, Johnson each have $1 million to spend</h1>
   	<p class="byline">By C.J. Sinner and Alan Palazzolo • <span>Star Tribune</span></p>
   	<!-- share -->
   </div>
@@ -20,18 +20,18 @@
     <section class="leadin">
       <p>The first look at finances after a surprising primary race for governor shows that DFL'er Tim Walz has still outraised Republican Jeff Johnson by a healthy margin, but then again, Johnson had been far behind Tim Pawlenty in fundraising before the primary, too.</p>
       <p>Walz has spent nearly $3 million so far, while Johnson has yet to crack the $1 million mark for spending. With a mere six weeks to Election Day, both candidates have hefty war chests in excess of $1 million that they can spend. Expect to see ads ramp up from both the candidates themselves and political action committees on both sides of the aisle.</p>
-      <p>Figures below include filings starting Jan. 1, 2017 and ending Sept. 18, 2018. For context, we've retained former candidates in the list who competed in the August primary, but who have not been required to file a September report.</p>
+      <p>Figures below include filings starting Jan. 1, 2017 and ending Sept. 18, 2018. For context, we've retained former candidates in the list who competed in the August primary, but who have not been required to file a September report. Their figures are through the end of July.</p>
         <div class="key">
-          <p><span class="keyTitle">Key:</span><!-- <span class="keyOut"></span> Dropped out --><span class="keyEnd"><img src="http://static.startribune.com/news/projects/all/campfi-2018/assets/images/check.svg"> Party endorsed</span></p>
+          <p><span class="keyTitle">Key:</span><span class="keyOut"></span> No longer in race <!--<span class="keyEnd"><img src="http://static.startribune.com/news/projects/all/campfi-2018/assets/images/check.svg"> Party endorsed</span>--></p>
         </div>
     </section>
 
     <!-- CASH -->
 
     <section>
-      <h4>Pawlenty, Walz have the most cash</h4>
+      <h4>At least $2 million left to spend</h4>
       <p class="timestamp">Sept. 26, 2018</p>
-
+      <p class="chat">If you think you're seeing a lot of ads now, you haven't seen anything yet. Plus, these figures don't include funds raised and spent by political action committees.</p>
 
       <table class="cashTable">
         <thead>
@@ -46,9 +46,9 @@
         <tbody>
           <% let govCash = _.sortBy(governor, g => parseFloat(g.cashDisplay || 0)).reverse(); %>
           <% _.each(govCash, (g, i) => { %>
-            <tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 4 ? 'nest' : '' %>">
+            <tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 8 ? 'nest' : '' %>">
               <td class="party"><span></span></td>
-              <td class="candName"><%= g.firstname %> <%= g.lastname %> <span><% if (g['endorsement'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campfi-2018/assets/images/check.svg"></span><% } %></span></td>
+              <td class="candName"><%= g.firstname %> <%= g.lastname %> </td>
               <td class="COH">$<%= parseFloat(g.cashDisplay || 0).toLocaleString() %></td>
               <td class="dataBar">
                 <% let w = parseFloat(g.cashDisplay || 0) / parseFloat(govCash[0].cashDisplay || 0) * 100 %>
@@ -73,8 +73,9 @@
 
     <!-- RAISED -->
   	<section>
-  		<h4>Millions raised before contested primaries</h4>
+  		<h4>Walz has raised twice as much as Johnson</h4>
   		<p class="timestamp">Sept. 26, 2018</p>
+      <p class="chat">Johnson's total fundraising lags behind Pawlenty's pre-primary take, but he caught up quickly after winning that race.</p>
 <!--       <div class="key">
         <p><span class="keyTitle">Key:</span><span class="keyOut"></span> Dropped out</p>
       </div> -->
@@ -92,9 +93,9 @@
         <tbody>
           <% let govReceipts = _.sortBy(governor, g => parseFloat(g.raisedDisplay || 0)).reverse(); %>
           <% _.each(govReceipts, (g, i) => { %>
-      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 4 ? 'nest' : '' %>">
+      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 8 ? 'nest' : '' %>">
       				<td class="party"><span></span></td>
-      				<td class="candName"><%= g.firstname %> <%= g.lastname %> <span><% if (g['endorsement'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campfi-2018/assets/images/check.svg"></span><% } %></span></td>
+      				<td class="candName"><%= g.firstname %> <%= g.lastname %> </td>
       				<td class="fundsRaised">$<%= parseFloat(g.raisedDisplay || 0).toLocaleString() %></td>
       				<td class="dataBar">
                 <% let w = parseFloat(g.raisedDisplay || 0) / parseFloat(govReceipts[0].raisedDisplay || 0) * 100 %>
@@ -120,8 +121,10 @@
     <!-- SPENT -->
 
     <section>
-  		<h4>Campaign spending ramps up</h4>
+  		<h4>Johnson holding back on spending</h4>
   		<p class="timestamp">Sept. 26, 2018</p>
+      <p class="chat">The republican candidate has spent a fraction of that of the Walz camp, signaling he may be holding out for a last push before Election Day.</p>
+
 <!--       <div class="key">
         <p><span class="keyTitle">Key:</span><span class="keyOut"></span> Dropped out</p>
       </div> -->
@@ -139,9 +142,9 @@
         <tbody>
           <% let govSpent = _.sortBy(governor, g => parseFloat(g.spentDisplay || 0)).reverse(); %>
           <% _.each(govSpent, (g, i) => { %>
-      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 4 ? 'nest' : '' %>">
+      			<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 8 ? 'nest' : '' %>">
       				<td class="party"><span></span></td>
-      				<td class="candName"><%= g.firstname %> <%= g.lastname %> <span><% if (g['endorsement'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campfi-2018/assets/images/check.svg"></span><% } %></span></td>
+      				<td class="candName"><%= g.firstname %> <%= g.lastname %> </td>
       				<td class="spent">$<%= parseFloat(g.spentDisplay || 0).toLocaleString() %></td>
       				<td class="dataBar">
                 <% let w = parseFloat(g.spentDisplay || 0) / parseFloat(govSpent[0].spentDisplay || 0) * 100 %>
