@@ -1,0 +1,7 @@
+race,fec_race_link,firstname,lastname,incumbent,party,out,fec_link,fec_link_raw_report,raised_display,spent_display,cash_display,raised_ye_2017,spent_ye_2017,cash_ye_2017,april_raised_display,april_spent_display,april_cash_display
+Senate (Special),https://www.fec.gov/data/elections/senate/MN/2018/,Tina,Smith,Y,D,0,https://www.fec.gov/data/candidate/S8MN00578/?cycle=2018&election_full=false,http://docquery.fec.gov/cgi-bin/paper_forms/C00663781/,4524933,2697676,1827257,152524,2687,149837,1999500,459248,1540251
+Senate (Special),https://www.fec.gov/data/elections/senate/MN/2018/,Karin,Housley,N,R,0,https://www.fec.gov/data/candidate/S8MN00586/?cycle=2018&election_full=false,http://docquery.fec.gov/cgi-bin/paper_forms/C00664219/,1677162,592433,1084728,157856,1737,156118,671901,171207,500693
+Senate (Special),,Jerry,Trooien,N,I,0,,,391226,373111,18114,,,,,,
+Senate (Special),,Richard,Painter,N,D,0,,,171263,95305,75957,,,,14911,1232,13679
+Senate (Scheduled),https://www.fec.gov/data/elections/senate/MN/2018/,Amy,Klobuchar,Y,D,0,https://www.fec.gov/data/candidate/S6MN00267/?tab=summary&cycle=2018&election_full=false,http://docquery.fec.gov/cgi-bin/paper_forms/C00431353/,6952889,2842561,6432015,5555445,1867299,5569814,6780734,2652570,6009833
+Senate (Scheduled),https://www.fec.gov/data/elections/senate/MN/2018/,Jim,Newberger,N,R,0,https://www.fec.gov/data/candidate/S8MN00552/?cycle=2018&election_full=false,http://docquery.fec.gov/cgi-bin/paper_forms/C00653022/,98979,97767,1210,44619,31336,13282,71655,59906,11748
